@@ -1,49 +1,544 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal Starter
-</h1>
+# KCD Toronto 2026 Website
 
-## 🚀 Quick start
+Official website for Kubernetes Community Days Toronto 2026 - May 13th, 2026 at The Quay.
 
-1.  **Create a Gatsby site.**
+## 🚀 Quick Start
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+```bash
+# Install dependencies
+npm install --legacy-peer-deps
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+# Start development server
+npm run develop
 
-2.  **Start developing.**
+# Build for production
+npm run build
 
-    Navigate into your new site’s directory and start it up.
+# Serve production build locally
+npm run serve
+```
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+Visit http://localhost:8000 to view the site.
 
-3.  **Open the code and start customizing!**
+---
 
-    Your site is now running at http://localhost:8000!
+## 📋 Table of Contents
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+- [Project Structure](#project-structure)
+- [Customization Guide](#customization-guide)
+- [API Integrations](#api-integrations)
+- [Adding Images](#adding-images)
+- [Updating Content](#updating-content)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
 
-4.  **Learn more**
+---
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## 📁 Project Structure
 
-## 🚀 Quick start (Netlify)
+```
+kcd-toronto-2026/
+├── src/
+│   ├── components/          # Reusable React components
+│   │   ├── layout.js       # Main layout with navbar & footer
+│   │   └── layout.css      # Global styles and Bulma customizations
+│   ├── images/             # Image assets
+│   │   └── icon.png        # Site favicon (update this!)
+│   └── pages/              # Page components (auto-routing)
+│       ├── index.js        # Homepage
+│       ├── about.js        # About KCD Toronto
+│       ├── schedule.js     # Event schedule
+│       ├── speakers.js     # Speakers & CFP
+│       ├── sponsors.js     # Sponsorship information
+│       ├── venue.js        # Venue details
+│       ├── team.js         # Organizing team
+│       ├── code-of-conduct.js  # Code of Conduct
+│       └── 404.js          # 404 error page
+├── gatsby-config.js        # Gatsby configuration
+├── netlify.toml           # Netlify build configuration
+└── package.json           # Dependencies
+```
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+---
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
+## 🎨 Customization Guide
+
+### 1. **Update Event Details**
+
+#### Date & Location
+Edit these files to update event information:
+
+**Homepage** (`src/pages/index.js`):
+```javascript
+// Line ~22
+<strong>Date:</strong> May 13th, 2026 | <strong>Location:</strong> The Quay, Toronto
+```
+
+**All Page Headers**: Update the hero sections in each page file.
+
+#### Site Metadata
+**File:** `gatsby-config.js`
+```javascript
+siteMetadata: {
+  title: `KCD Toronto 2026`,
+  siteUrl: `https://kcdtoronto.ca` // Update with your domain
+}
+```
+
+---
+
+### 2. **Update Contact Emails**
+
+Replace placeholder emails throughout the site:
+
+**Files to update:**
+- `src/components/layout.js` (footer)
+- `src/pages/sponsors.js`
+- `src/pages/team.js`
+- `src/pages/code-of-conduct.js`
+
+**Current placeholders:**
+- `info@kcdtoronto.ca`
+- `sponsors@kcdtoronto.ca`
+- `conduct@kcdtoronto.ca`
+- `volunteer@kcdtoronto.ca`
+- `team@kcdtoronto.ca`
+
+**Update to:**
+- Real team emails or
+- Email forwarding service
+- Domain-specific emails
+
+---
+
+### 3. **Update Venue Information**
+
+**File:** `src/pages/venue.js`
+
+Current venue: **The Quay: Toronto Region Board of Trade**
+
+Update with:
+- Full address
+- Parking information
+- Transit directions
+- Accessibility details
+- Venue contact info
+
+---
+
+## 🖼️ Adding Images
+
+### Where to Add Images
+
+```
+src/images/
+├── icon.png              # Favicon (512x512px recommended)
+├── logo.png              # KCD Toronto logo
+├── hero-background.jpg   # Homepage hero image
+├── venue/                # Venue photos
+├── speakers/             # Speaker headshots
+└── sponsors/             # Sponsor logos
+```
+
+### Using Images in Pages
+
+**Option 1: Static Images**
+```javascript
+import logoImage from '../images/logo.png'
+
+<img src={logoImage} alt="KCD Toronto Logo" />
+```
+
+**Option 2: Gatsby Image (Optimized)**
+```javascript
+import { StaticImage } from "gatsby-plugin-image"
+
+<StaticImage
+  src="../images/hero.jpg"
+  alt="KCD Toronto"
+  placeholder="blurred"
+  layout="fullWidth"
+/>
+```
+
+### Image Optimization Tips
+
+- **Use WebP or AVIF** for better compression
+- **Compress images** before uploading (use TinyPNG, Squoosh)
+- **Recommended sizes:**
+  - Hero images: 1920x1080px
+  - Speaker photos: 400x400px
+  - Sponsor logos: 300x150px (transparent PNG)
+  - Favicon: 512x512px
+
+---
+
+## 🔌 API Integrations
+
+### Sessionize (Speaker Management & CFP)
+
+**What is Sessionize?**
+- Speaker submission platform
+- Manages Call for Proposals (CFP)
+- Speaker database with photos & bios
+- Schedule builder
+
+**Integration Steps:**
+
+1. **Create Sessionize Account**: https://sessionize.com
+2. **Set up your event**
+3. **Get API Endpoint**:
+   ```
+   https://sessionize.com/api/v2/{event_id}/view/speakers
+   ```
+
+4. **Update `src/pages/speakers.js`**:
+
+```javascript
+import { useState, useEffect } from 'react'
+
+const SpeakersPage = () => {
+  const [speakers, setSpeakers] = useState([])
+
+  useEffect(() => {
+    fetch('https://sessionize.com/api/v2/YOUR_EVENT_ID/view/speakers')
+      .then(res => res.json())
+      .then(data => setSpeakers(data))
+  }, [])
+
+  return (
+    <Layout>
+      {/* Map through speakers */}
+      {speakers.map(speaker => (
+        <div key={speaker.id}>
+          <img src={speaker.profilePicture} alt={speaker.fullName} />
+          <h3>{speaker.fullName}</h3>
+          <p>{speaker.bio}</p>
+        </div>
+      ))}
+    </Layout>
+  )
+}
+```
+
+**Sessionize Features to Use:**
+- Embed CFP form: `<iframe src="https://sessionize.com/YOUR_EVENT/apply"></iframe>`
+- Speaker grid with filters
+- Schedule builder
+- Session details
+
+---
+
+### Ti.to / Eventbrite (Registration/Ticketing)
+
+**Option 1: Ti.to (Recommended for tech events)**
+
+**File:** `src/pages/index.js`
+
+```javascript
+// Add Ti.to widget
+useEffect(() => {
+  const script = document.createElement('script')
+  script.src = 'https://js.tito.io/v1'
+  script.async = true
+  document.body.appendChild(script)
+}, [])
+
+// Replace registration button
+<tito-button event="kcd-toronto/2026">Register Now</tito-button>
+```
+
+**Option 2: Eventbrite**
+
+```javascript
+// Embed Eventbrite widget
+<div id="eventbrite-widget-container"></div>
+
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+<script>
+  window.EBWidgets.createWidget({
+    widgetType: 'checkout',
+    eventId: 'YOUR_EVENT_ID',
+    iframeContainerId: 'eventbrite-widget-container'
+  })
+</script>
+```
+
+---
+
+### Mailchimp / Buttondown (Email Collection)
+
+**Add Newsletter Signup Form:**
+
+**File:** `src/components/newsletter-signup.js`
+
+```javascript
+const NewsletterSignup = () => {
+  return (
+    <div className="box">
+      <h3>Stay Updated</h3>
+      <form action="https://YOUR_MAILCHIMP_URL" method="post">
+        <div className="field has-addons">
+          <div className="control is-expanded">
+            <input
+              className="input"
+              type="email"
+              name="EMAIL"
+              placeholder="your@email.com"
+              required
+            />
+          </div>
+          <div className="control">
+            <button type="submit" className="button is-primary">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  )
+}
+```
+
+---
+
+## 📝 Updating Content
+
+### Sponsors Page
+
+**File:** `src/pages/sponsors.js`
+
+The sponsorship tiers are based on the official prospectus:
+
+**Tier Pricing:**
+- Platinum: $10,000 (6 available)
+- Gold: $7,000 (10 available)
+- Silver: $4,000 (12 available)
+- Community Partner: In-kind
+
+**To add sponsor logos:**
+
+1. Add logo to `src/images/sponsors/`
+2. Update `src/pages/sponsors.js`:
+
+```javascript
+// Import logos
+import platinumSponsor1 from '../images/sponsors/company-logo.png'
+
+// Replace placeholder boxes
+<div className="column is-4">
+  <div className="box has-text-centered">
+    <img src={platinumSponsor1} alt="Sponsor Name" />
+  </div>
+</div>
+```
+
+---
+
+### Speakers Page
+
+**File:** `src/pages/speakers.js`
+
+**Manual Speaker Addition (before Sessionize integration):**
+
+```javascript
+const speakers = [
+  {
+    name: "Jane Doe",
+    role: "Principal Engineer",
+    company: "Tech Corp",
+    image: "/images/speakers/jane-doe.jpg",
+    bio: "Jane is a...",
+    twitter: "@janedoe"
+  },
+  // Add more speakers
+]
+
+// Map through speakers array
+{speakers.map((speaker, i) => (
+  <div key={i} className="column is-4">
+    <div className="card">
+      <div className="card-image">
+        <figure className="image is-square">
+          <img src={speaker.image} alt={speaker.name} />
+        </figure>
+      </div>
+      <div className="card-content">
+        <p className="title is-4">{speaker.name}</p>
+        <p className="subtitle is-6">{speaker.role} @ {speaker.company}</p>
+        <p>{speaker.bio}</p>
+      </div>
+    </div>
+  </div>
+))}
+```
+
+---
+
+### Schedule Page
+
+**File:** `src/pages/schedule.js`
+
+Update the `scheduleItems` array with real event schedule:
+
+```javascript
+const scheduleItems = [
+  {
+    time: "9:00 AM - 9:30 AM",
+    title: "Registration & Coffee",
+    description: "Check in and network"
+  },
+  {
+    time: "9:30 AM - 10:15 AM",
+    title: "Opening Keynote",
+    speaker: "Speaker Name",
+    description: "Welcome to KCD Toronto 2026"
+  },
+  // Add more schedule items
+]
+```
+
+---
+
+## 🎨 Styling & Branding
+
+### Color Customization
+
+**File:** `src/components/layout.css`
+
+```css
+:root {
+  --color-primary: #326ce5;    /* Kubernetes Blue */
+  --color-secondary: #00d1b2;  /* Teal */
+  --color-dark: #363636;
+  --color-light: #f5f5f5;
+}
+```
+
+### Typography
+
+Current fonts: **IBM Plex Sans**, **Nunito Sans**
+
+To change fonts, update `src/components/layout.css`:
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Your+Font&display=swap');
+
+html {
+  font-family: 'Your Font', sans-serif;
+}
+```
+
+---
+
+## 🚀 Deployment
+
+### Netlify (Current Setup)
+
+**Automatic deployments configured!**
+
+Every push to `main` branch triggers a new deployment.
+
+**Build Settings (already configured in `netlify.toml`):**
+- Build command: `npm install --legacy-peer-deps && npm run build`
+- Publish directory: `public`
+
+### Manual Deployment
+
+```bash
+# Build the site
+npm run build
+
+# Deploy to Netlify (if using Netlify CLI)
+netlify deploy --prod
+```
+
+### Custom Domain Setup
+
+1. Purchase domain (e.g., `kcdtoronto.ca`)
+2. In Netlify Dashboard:
+   - Site Settings → Domain management
+   - Add custom domain
+3. Update DNS records at your registrar:
+   - A Record: `@` → `75.2.60.5`
+   - CNAME: `www` → `your-site.netlify.app`
+4. SSL automatically provisions in ~10 minutes
+
+---
+
+## 🤝 Contributing
+
+### Development Workflow
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/distributethe6ix/kcd-toronto-front-end.git
+   cd kcd-toronto-front-end/kcd-toronto-2026
+   ```
+
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+3. **Make your changes**
+   - Update content, add images, integrate APIs
+   - Test locally with `npm run develop`
+
+4. **Commit your changes**
+   ```bash
+   git add .
+   git commit -m "Add feature: your feature description"
+   ```
+
+5. **Push to GitHub**
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+6. **Create a Pull Request**
+   - Go to GitHub repository
+   - Create PR from your branch to `main`
+   - Request review from team
+
+### Code Style
+
+- Use **Bulma CSS classes** for styling
+- Keep components simple and reusable
+- Add comments for complex logic
+- Use meaningful variable names
+
+---
+
+## 📞 Support & Contact
+
+**Organizers:**
+- Ayrat Khayretdinov: Ayrat.khayretdinov@gmail.com
+- Marino Wijay: marino.wijay@gmail.com
+
+**Social Media:**
+- Twitter: https://x.com/@KCDToronto
+- LinkedIn: https://www.linkedin.com/company/kcdtoronto
+- Linktree: https://linktr.ee/kcd.toronto
+
+**Official Event Page:**
+- toronto-org@kubernetescommunitydays.org
+
+---
+
+## 📄 License
+
+This project is part of the Kubernetes Community Days program, supported by the CNCF.
+
+---
+
+## 🙏 Acknowledgments
+
+- Built with [Gatsby](https://www.gatsbyjs.com/)
+- Styled with [Bulma CSS](https://bulma.io/)
+- Hosted on [Netlify](https://www.netlify.com/)
+- Supported by [Cloud Native Computing Foundation](https://www.cncf.io/)
+
+---
+
+**Ready to make KCD Toronto 2026 amazing!** 🚀🎉

@@ -60,43 +60,115 @@ const SponsorsPage = () => {
 
           <h2 className="title is-2 mt-6 mb-5 has-text-centered">Sponsorship Tiers</h2>
 
-          <div className="box mb-5">
-            <h3 className="title is-3" style={{ color: "#FFD700" }}>🏆 Platinum Sponsors</h3>
-            <p>Premium visibility including keynote opportunity, largest booth space, logo placement on all materials, and 10 conference passes.</p>
-            <div className="columns mt-4">
+          <div className="box mb-5" style={{ borderLeft: "6px solid #C0C0C0" }}>
+            <div className="columns">
+              <div className="column is-8">
+                <h3 className="title is-3" style={{ color: "#C0C0C0" }}>🏆 Platinum Sponsors - $10,000</h3>
+                <p className="mb-3">
+                  Platinum sponsors have the biggest impact on the conference. They represent companies for which Cloud Native approach is central in the way they implement their activity.
+                </p>
+                <p className="mb-3"><strong>6 available spots</strong></p>
+                <div className="content">
+                  <p className="has-text-weight-semibold">What's Included:</p>
+                  <ul>
+                    <li>Extra Large booth</li>
+                    <li>6 tickets</li>
+                    <li>Keynote mention</li>
+                    <li>3-minute sponsored Keynote</li>
+                    <li>Quote in KCD promotions and social channels</li>
+                    <li>30% Discount code for guests (10 tickets)</li>
+                    <li>Branding in all swag and marketing material</li>
+                    <li>Logo on website and all video replays</li>
+                  </ul>
+                </div>
+              </div>
               <div className="column is-4">
-                <div className="box has-text-centered has-background-light" style={{ border: "2px dashed #ccc" }}>
-                  <p className="has-text-grey">Your Logo Here</p>
+                <div className="box has-text-centered has-background-light" style={{ border: "2px dashed #ccc", padding: "3rem" }}>
+                  <p className="has-text-grey is-size-5">Your Logo Here</p>
+                  <p className="has-text-grey is-size-7 mt-2">(6 spots available)</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="box mb-5">
-            <h3 className="title is-3" style={{ color: "#C0C0C0" }}>🥈 Gold Sponsors</h3>
-            <p>High visibility including booth space, logo on website and signage, speaking opportunity, and 6 conference passes.</p>
-            <div className="columns mt-4">
-              {[1, 2].map((i) => (
-                <div key={i} className="column is-4">
-                  <div className="box has-text-centered has-background-light" style={{ border: "2px dashed #ccc" }}>
-                    <p className="has-text-grey">Your Logo Here</p>
-                  </div>
+          <div className="box mb-5" style={{ borderLeft: "6px solid #FFD700" }}>
+            <div className="columns">
+              <div className="column is-8">
+                <h3 className="title is-3" style={{ color: "#FFD700" }}>🥈 Gold Sponsors - $7,000</h3>
+                <p className="mb-3">
+                  Gold sponsors form the backbone of the conference backers. They represent companies that believe the strongest in the Cloud Native movement and have the financial means and the willingness to support it.
+                </p>
+                <p className="mb-3"><strong>10 available spots</strong></p>
+                <div className="content">
+                  <p className="has-text-weight-semibold">What's Included:</p>
+                  <ul>
+                    <li>Large booth</li>
+                    <li>4 tickets</li>
+                    <li>Quote in KCD promotions and social channels</li>
+                    <li>30% Discount code for guests (10 tickets)</li>
+                    <li>Branding in all swag and marketing material</li>
+                    <li>Logo on website and video replays</li>
+                  </ul>
                 </div>
-              ))}
+              </div>
+              <div className="column is-4">
+                <div className="box has-text-centered has-background-light" style={{ border: "2px dashed #ccc", padding: "3rem" }}>
+                  <p className="has-text-grey is-size-5">Your Logo Here</p>
+                  <p className="has-text-grey is-size-7 mt-2">(10 spots available)</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="box mb-5">
-            <h3 className="title is-3" style={{ color: "#CD7F32" }}>🥉 Silver Sponsors</h3>
-            <p>Logo on website, signage, and promotional materials, plus 3 conference passes.</p>
-            <div className="columns is-multiline mt-4">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="column is-4">
-                  <div className="box has-text-centered has-background-light" style={{ border: "2px dashed #ccc" }}>
-                    <p className="has-text-grey">Your Logo Here</p>
-                  </div>
+          <div className="box mb-5" style={{ borderLeft: "6px solid #B87333" }}>
+            <div className="columns">
+              <div className="column is-8">
+                <h3 className="title is-3" style={{ color: "#B87333" }}>🥉 Silver Sponsors - $4,000</h3>
+                <p className="mb-3">
+                  Silver sponsors are important contributors to the conference. They represent companies who believe in cloud native technologies and experience daily their benefits for their software and platforms (or those from their customers!).
+                </p>
+                <p className="mb-3"><strong>12 available spots</strong></p>
+                <div className="content">
+                  <p className="has-text-weight-semibold">What's Included:</p>
+                  <ul>
+                    <li>Medium Booth</li>
+                    <li>2 tickets</li>
+                    <li>30% Discount code for guests (4 tickets)</li>
+                    <li>Branding in all swag and marketing material</li>
+                    <li>Logo on website</li>
+                  </ul>
                 </div>
-              ))}
+              </div>
+              <div className="column is-4">
+                <div className="box has-text-centered has-background-light" style={{ border: "2px dashed #ccc", padding: "3rem" }}>
+                  <p className="has-text-grey is-size-5">Your Logo Here</p>
+                  <p className="has-text-grey is-size-7 mt-2">(12 spots available)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="box mb-5" style={{ borderLeft: "6px solid #E91E63" }}>
+            <div className="columns">
+              <div className="column is-8">
+                <h3 className="title is-3" style={{ color: "#E91E63" }}>💜 Community Partner - In Kind</h3>
+                <p className="mb-3">
+                  Community partners, such as cloud native project maintainers, tech community leaders in Open Source, DevOps, or Cloud Native technologies, and Open Source Evangelists, play a unique role as central contributors to our KCD event.
+                </p>
+                <div className="content">
+                  <p className="has-text-weight-semibold">What's Included:</p>
+                  <ul>
+                    <li>1 Ticket</li>
+                    <li>Presence in the community zone: a special place at the venue</li>
+                    <li>Logo on website</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="column is-4">
+                <div className="box has-text-centered has-background-light" style={{ border: "2px dashed #ccc", padding: "3rem" }}>
+                  <p className="has-text-grey is-size-5">Your Logo Here</p>
+                </div>
+              </div>
             </div>
           </div>
 
