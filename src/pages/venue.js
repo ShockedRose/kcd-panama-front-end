@@ -1,0 +1,97 @@
+import * as React from "react"
+import Layout from "../components/layout"
+
+const VenuePage = () => {
+  return (
+    <Layout>
+      <section className="hero is-primary">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title is-1">Venue</h1>
+            <p className="subtitle is-3">Getting to KCD Toronto</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="notification is-info is-light">
+            <h2 className="title is-4">Venue Coming Soon</h2>
+            <p>
+              We're currently finalizing the venue for KCD Toronto 2026. The venue will be centrally located
+              in Toronto with excellent transit access and modern facilities.
+            </p>
+          </div>
+
+          <div className="content is-medium mt-6">
+            <h2 className="title is-2">Getting to Toronto</h2>
+
+            <div className="columns is-multiline">
+              <div className="column is-6">
+                <div className="box">
+                  <h3 className="title is-4">By Air</h3>
+                  <p>
+                    <strong>Toronto Pearson International Airport (YYZ)</strong> serves the Greater Toronto Area
+                    with connections worldwide. The UP Express train provides a direct link to downtown Toronto in 25 minutes.
+                  </p>
+                </div>
+              </div>
+
+              <div className="column is-6">
+                <div className="box">
+                  <h3 className="title is-4">By Train</h3>
+                  <p>
+                    <strong>Union Station</strong> is Toronto's main railway station, served by VIA Rail and GO Transit
+                    for regional connections.
+                  </p>
+                </div>
+              </div>
+
+              <div className="column is-6">
+                <div className="box">
+                  <h3 className="title is-4">Public Transit</h3>
+                  <p>
+                    Toronto has an extensive TTC system including subway, streetcar, and bus services.
+                    A single ride costs $3.35 CAD.
+                  </p>
+                </div>
+              </div>
+
+              <div className="column is-6">
+                <div className="box">
+                  <h3 className="title is-4">By Car</h3>
+                  <p>
+                    Parking in downtown Toronto can be limited and expensive. We recommend using public transit
+                    or ride-sharing services.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <h2 className="title is-2 mt-6">Explore Toronto</h2>
+            <p>While you're in Toronto for KCD, take some time to explore Canada's largest city!</p>
+            <ul>
+              <li><strong>CN Tower:</strong> Iconic landmark with stunning city views</li>
+              <li><strong>Ripley's Aquarium:</strong> World-class aquarium</li>
+              <li><strong>St. Lawrence Market:</strong> Historic market with local food vendors</li>
+              <li><strong>Distillery District:</strong> Pedestrian-only village with art galleries</li>
+              <li><strong>Royal Ontario Museum:</strong> Canada's largest museum</li>
+              <li><strong>Toronto Islands:</strong> Car-free islands with beaches and parks</li>
+            </ul>
+          </div>
+
+          <div className="box has-background-light mt-6">
+            <p>
+              <strong>Questions about the venue or getting to Toronto?</strong> Contact us at{" "}
+              <a href="mailto:info@kcdtoronto.ca">info@kcdtoronto.ca</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  )
+}
+
+export default VenuePage
+
+export const Head = () => <title>Venue - KCD Toronto 2026</title>
