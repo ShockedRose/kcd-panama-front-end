@@ -82,40 +82,23 @@ const CFPPage = () => {
                 </div>
               </div>
 
-              {/* Sessionize CFP Form Embed */}
+              {/* Sessionize CFP Form Link */}
               <div className="box has-background-primary-light">
                 <h2 className="title is-3 has-text-centered mb-5">Submit Your Proposal</h2>
-                <div className="content">
-                  <div style={{
-                    position: "relative",
-                    paddingBottom: "56.25%",
-                    height: 0,
-                    overflow: "hidden",
-                    backgroundColor: "#fff",
-                    borderRadius: "6px"
-                  }}>
-                    <iframe
-                      src="https://sessionize.com/kcd-toronto-2026"
-                      style={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                        border: "none"
-                      }}
-                      title="KCD Toronto 2026 Call for Proposals"
-                    />
-                  </div>
-                  <p className="has-text-centered mt-4">
-                    <a
-                      href="https://sessionize.com/kcd-toronto-2026"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="button is-primary"
-                    >
-                      Open in New Window
-                    </a>
+                <div className="content has-text-centered">
+                  <p className="is-size-5 mb-5">
+                    Ready to share your cloud native expertise? Submit your proposal through our Sessionize portal.
+                  </p>
+                  <a
+                    href="https://sessionize.com/kcd-toronto-2026"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="button is-primary is-large"
+                  >
+                    <strong>Submit Your Proposal on Sessionize</strong>
+                  </a>
+                  <p className="mt-4 has-text-grey">
+                    <small>You'll be redirected to Sessionize to complete your submission</small>
                   </p>
                 </div>
               </div>
