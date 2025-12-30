@@ -3,12 +3,14 @@ import Layout from "../components/layout"
 
 const TeamPage = () => {
   const teamMembers = [
-    { name: "Your Name Here", role: "Lead Organizer", description: "Coordinating overall event planning" },
-    { name: "Team Member", role: "Program Chair", description: "Managing speaker selection" },
-    { name: "Team Member", role: "Sponsorship Lead", description: "Building sponsor relationships" },
-    { name: "Team Member", role: "Marketing & Communications", description: "Promoting the event" },
-    { name: "Team Member", role: "Venue & Logistics", description: "Coordinating venue and catering" },
-    { name: "Team Member", role: "Volunteer Coordinator", description: "Managing event volunteers" },
+    { name: "Adriana Villela", role: "Organizer", description: "Principal Developer Advocate | OTel End User SIG Maintainer" },
+    { name: "Andre Marcelo-Tanner", role: "Organizer", description: "SRE" },
+    { name: "Ayrat Khayretdinov", role: "Organizer", description: "CNCF Ambassador" },
+    { name: "Jason Hadi", role: "Organizer", description: "SRE @ ecobee" },
+    { name: "Jason Paolasini", role: "Organizer", description: "" },
+    { name: "John Nixon", role: "Organizer", description: "" },
+    { name: "Marino Wijay", role: "Organizer", description: "Channel Manager" },
+    { name: "Michael Foster", role: "Organizer", description: "CNCF Ambassador / Kube Security Junkie / Red Hatter" },
   ]
 
   return (
@@ -29,7 +31,7 @@ const TeamPage = () => {
             We're passionate about bringing together technologists, practitioners, and enthusiasts.
           </p>
 
-          <h2 className="title is-2 mb-5">Core Organizing Team</h2>
+          <h2 className="title is-2 mb-5 has-text-centered">Organizing Team</h2>
 
           <div className="columns is-multiline">
             {teamMembers.map((member, index) => (

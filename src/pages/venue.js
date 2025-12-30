@@ -15,11 +15,14 @@ const VenuePage = () => {
 
       <section className="section">
         <div className="container">
-          <div className="notification is-info is-light">
-            <h2 className="title is-4">Venue Coming Soon</h2>
-            <p>
-              We're currently finalizing the venue for KCD Toronto 2026. The venue will be centrally located
-              in Toronto with excellent transit access and modern facilities.
+          <div className="box has-background-primary-light">
+            <h2 className="title is-3 has-text-centered">The Quay - Toronto Region Board of Trade</h2>
+            <p className="has-text-centered is-size-5 mb-4">
+              <strong>100 Queens Quay E, Toronto, ON</strong>
+            </p>
+            <p className="has-text-centered">
+              Join us on <strong>May 13, 2026</strong> at The Quay, a modern waterfront venue located in the heart of downtown Toronto
+              with stunning views of Lake Ontario and excellent transit access.
             </p>
           </div>
 
