@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `KCD Toronto 2026`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://kcdtoronto.ca`
   },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
