@@ -38,7 +38,7 @@ const SpeakersPage = () => {
                 </div>
               </div>
               <div className="has-text-centered mt-5">
-                <a href="#cfp" className="button is-primary is-large">
+                <a href="/cfp" className="button is-primary is-large">
                   <strong>Submit Your Proposal</strong>
                 </a>
               </div>
