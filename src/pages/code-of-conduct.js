@@ -59,7 +59,7 @@ const CodeOfConductPage = () => {
 
             <div className="box has-background-info-light mt-4">
               <p className="has-text-weight-semibold">
-                Email: <a href="mailto:conduct@kcdtoronto.ca">conduct@kcdtoronto.ca</a>
+                Email: <a href="mailto:toronto-org@kubernetescommunitydays.org">toronto-org@kubernetescommunitydays.org</a>
               </p>
             </div>
 

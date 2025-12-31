@@ -86,7 +86,7 @@ const VenuePage = () => {
           <div className="box has-background-light mt-6">
             <p>
               <strong>Questions about the venue or getting to Toronto?</strong> Contact us at{" "}
-              <a href="mailto:info@kcdtoronto.ca">info@kcdtoronto.ca</a>
+              <a href="mailto:toronto-org@kubernetescommunitydays.org">toronto-org@kubernetescommunitydays.org</a>
             </p>
           </div>
         </div>

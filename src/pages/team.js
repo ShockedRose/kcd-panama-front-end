@@ -83,7 +83,7 @@ const TeamPage = () => {
                 </div>
               </div>
               <div className="has-text-centered mt-5">
-                <a href="mailto:volunteer@kcdtoronto.ca" className="button is-primary is-large">
+                <a href="mailto:toronto-org@kubernetescommunitydays.org" className="button is-primary is-large">
                   <strong>Volunteer with Us</strong>
                 </a>
               </div>
@@ -93,7 +93,7 @@ const TeamPage = () => {
           <div className="box has-background-light mt-6">
             <p>
               <strong>Questions for the organizing team?</strong> Reach out to us at{" "}
-              <a href="mailto:team@kcdtoronto.ca">team@kcdtoronto.ca</a>
+              <a href="mailto:toronto-org@kubernetescommunitydays.org">toronto-org@kubernetescommunitydays.org</a>
             </p>
           </div>
         </div>

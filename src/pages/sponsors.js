@@ -23,7 +23,7 @@ const SponsorsPage = () => {
                 you'll connect with the Canadian cloud native community and showcase your commitment to open source innovation.
               </p>
               <div className="has-text-centered mt-5">
-                <a href="mailto:sponsors@kcdtoronto.ca" className="button is-primary is-large">
+                <a href="mailto:toronto-org@kubernetescommunitydays.org" className="button is-primary is-large">
                   <strong>View Sponsorship Prospectus</strong>
                 </a>
               </div>
@@ -178,7 +178,7 @@ const SponsorsPage = () => {
               Contact us to discuss custom opportunities including lunch sponsorship, coffee breaks, swag bags, and more.
             </p>
             <p className="mt-3">
-              <strong>Email:</strong> <a href="mailto:sponsors@kcdtoronto.ca">sponsors@kcdtoronto.ca</a>
+              <strong>Email:</strong> <a href="mailto:toronto-org@kubernetescommunitydays.org">toronto-org@kubernetescommunitydays.org</a>
             </p>
           </div>
         </div>

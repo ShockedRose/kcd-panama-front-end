@@ -168,7 +168,7 @@ const CFPPage = () => {
                 <h3 className="title is-5 has-text-centered">Need Help or Have Questions?</h3>
                 <p className="has-text-centered">
                   We're here to help! Reach out to our speaker team at{" "}
-                  <a href="mailto:speakers@kcdtoronto.ca"><strong>speakers@kcdtoronto.ca</strong></a>
+                  <a href="mailto:toronto-org@kubernetescommunitydays.org"><strong>toronto-org@kubernetescommunitydays.org</strong></a>
                 </p>
                 <p className="has-text-centered mt-3 has-text-grey">
                   <small>

@@ -116,3 +116,31 @@ main {
   display: block;
   margin: 4px 0;
 }
+
+/* Accessibility: Ensure proper contrast on blue backgrounds */
+.has-background-primary-light {
+  background-color: #eff5fb !important;
+  color: #1a1a1a !important;
+}
+
+.has-background-info-light {
+  background-color: #eff5fb !important;
+  color: #1a1a1a !important;
+}
+
+.has-background-primary {
+  background-color: var(--color-primary) !important;
+  color: white !important;
+}
+
+/* Ensure hero sections have white text for proper contrast */
+.hero.is-primary .title,
+.hero.is-primary .subtitle {
+  color: white !important;
+}
+
+/* Ensure notification components have proper contrast */
+.notification.is-primary {
+  background-color: var(--color-primary) !important;
+  color: white !important;
+}
