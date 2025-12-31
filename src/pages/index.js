@@ -1,5 +1,6 @@
 import * as React from "react"
 import Layout from "../components/layout"
+import { StaticImage } from "gatsby-plugin-image"
 
 const IndexPage = () => {
   return (
@@ -136,6 +137,74 @@ const IndexPage = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Photos Section */}
+      <section className="section">
+        <div className="container">
+          <h2 className="title is-2 has-text-centered mb-5">Our Community</h2>
+          <p className="has-text-centered is-size-5 mb-6">
+            The Toronto cloud native community comes together regularly at our CNCF meetups to share, learn, and grow together.
+          </p>
+
+          <div className="photo-gallery">
+            <div className="photo-gallery-item">
+              <StaticImage
+                src="../images/homepage/IMG_0820.jpeg"
+                alt="CNCF Toronto Meetup Community"
+                placeholder="blurred"
+              />
+            </div>
+            <div className="photo-gallery-item">
+              <StaticImage
+                src="../images/homepage/IMG_1196.jpeg"
+                alt="CNCF Toronto Meetup Community"
+                placeholder="blurred"
+              />
+            </div>
+            <div className="photo-gallery-item">
+              <StaticImage
+                src="../images/homepage/IMG_4087.jpeg"
+                alt="CNCF Toronto Meetup Community"
+                placeholder="blurred"
+              />
+            </div>
+            <div className="photo-gallery-item">
+              <StaticImage
+                src="../images/homepage/IMG_8439.jpeg"
+                alt="CNCF Toronto Meetup Community"
+                placeholder="blurred"
+              />
+            </div>
+            <div className="photo-gallery-item">
+              <StaticImage
+                src="../images/homepage/IMG_9132.jpeg"
+                alt="CNCF Toronto Meetup Community"
+                placeholder="blurred"
+              />
+            </div>
+            <div className="photo-gallery-item">
+              <StaticImage
+                src="../images/homepage/IMG_9503.jpeg"
+                alt="CNCF Toronto Meetup Community"
+                placeholder="blurred"
+              />
+            </div>
+            <div className="photo-gallery-item">
+              <StaticImage
+                src="../images/homepage/IMG_9708.jpeg"
+                alt="CNCF Toronto Meetup Community"
+                placeholder="blurred"
+              />
+            </div>
+          </div>
+
+          <div className="has-text-centered mt-6">
+            <a href="/community" className="button is-primary is-medium">
+              <strong>View More Photos</strong>
+            </a>
           </div>
         </div>
       </section>

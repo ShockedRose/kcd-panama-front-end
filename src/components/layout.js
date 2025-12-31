@@ -41,6 +41,9 @@ const Layout = ({ children }) => {
               <Link to="/sponsors" className="navbar-item">
                 Sponsors
               </Link>
+              <Link to="/community" className="navbar-item">
+                Community
+              </Link>
               <Link to="/venue" className="navbar-item">
                 Venue
               </Link>
