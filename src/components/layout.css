@@ -176,7 +176,7 @@ main {
 }
 
 .photo-gallery-item:hover img {
-  transform: scale(2);
+  transform: scale(1.1);
 }
 
 /* Responsive adjustments for photo gallery */

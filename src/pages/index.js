@@ -7,7 +7,7 @@ const IndexPage = () => {
     <Layout>
       {/* Hero Section with Banner */}
       <section className="hero is-primary is-medium hero-with-banner" style={{
-        backgroundImage: "url('/static/IMG_7165-b5e38e2c1d0d8f5a89b6c3e4d5a7c8b9.JPG')"
+        backgroundImage: "url('/IMG_7165.JPG')"
       }}>
         <div className="hero-body" style={{ position: 'relative', zIndex: 1 }}>
           <div className="container has-text-centered">
