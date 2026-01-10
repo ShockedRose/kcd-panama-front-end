@@ -16,6 +16,13 @@ const IndexPage = () => {
               <br />
               Toronto 2026
             </h1>
+            <div className="mb-4" style={{ backgroundColor: 'white', padding: '1.5rem', borderRadius: '8px', display: 'inline-block' }}>
+              <img
+                src="/toronto-cncf-stacked-transparent.png"
+                alt="KCD Toronto Logo"
+                style={{ height: '200px', width: 'auto' }}
+              />
+            </div>
             <p className="subtitle is-3">
               Join the cloud native community for a day of learning, networking, and collaboration
             </p>
@@ -26,7 +33,7 @@ const IndexPage = () => {
             </div>
             <div className="buttons is-centered mt-5">
               <a href="#register" className="button is-light is-large">
-                <strong>Register Now</strong>
+                <strong>Register Now (Coming Soon!)</strong>
               </a>
               <a href="/sponsors" className="button is-outlined is-light is-large">
                 <strong>Become a Sponsor</strong>
@@ -269,7 +276,7 @@ const IndexPage = () => {
               </div>
               <div className="column is-4 has-text-centered">
                 <a href="#register" className="button is-primary is-large">
-                  <strong>Register Now</strong>
+                  <strong>Register Now (Coming Soon!)</strong>
                 </a>
               </div>
             </div>
