@@ -9,7 +9,8 @@ module.exports = {
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "static/toronto-cncf.png"
+      "icon": "static/toronto-cncf.png",
+      "lang": "en"
     }
   }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',

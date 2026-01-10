@@ -177,7 +177,7 @@ const IndexPage = () => {
               <div className="photo-gallery-item">
                 <StaticImage
                   src="../images/homepage/IMG_0820.jpeg"
-                  alt="CNCF Toronto Meetup Community"
+                  alt="Attendees networking and socializing at CNCF Toronto meetup"
                   placeholder="blurred"
                 />
               </div>
@@ -186,7 +186,7 @@ const IndexPage = () => {
               <div className="photo-gallery-item">
                 <StaticImage
                   src="../images/homepage/IMG_4087.jpeg"
-                  alt="CNCF Toronto Meetup Community"
+                  alt="Community members engaged in discussion at CNCF Toronto event"
                   placeholder="blurred"
                 />
               </div>
@@ -199,7 +199,7 @@ const IndexPage = () => {
               <div className="photo-gallery-item">
                 <StaticImage
                   src="../images/homepage/IMG_8439.jpeg"
-                  alt="CNCF Toronto Meetup Community"
+                  alt="Speaker presenting to audience at CNCF Toronto meetup"
                   placeholder="blurred"
                 />
               </div>
@@ -230,7 +230,7 @@ const IndexPage = () => {
               <div className="photo-gallery-item">
                 <StaticImage
                   src="../images/homepage/IMG_9132.jpeg"
-                  alt="CNCF Toronto Meetup Community"
+                  alt="Group photo of CNCF Toronto community members and organizers"
                   placeholder="blurred"
                 />
               </div>
@@ -243,7 +243,7 @@ const IndexPage = () => {
               <div className="photo-gallery-item">
                 <StaticImage
                   src="../images/homepage/IMG_9503.jpeg"
-                  alt="CNCF Toronto Meetup Community"
+                  alt="Workshop session with participants collaborating on cloud native technologies"
                   placeholder="blurred"
                 />
               </div>
@@ -252,7 +252,7 @@ const IndexPage = () => {
               <div className="photo-gallery-item">
                 <StaticImage
                   src="../images/homepage/IMG_9708.jpeg"
-                  alt="CNCF Toronto Meetup Community"
+                  alt="Community members mingling and networking during CNCF Toronto event break"
                   placeholder="blurred"
                 />
               </div>
@@ -268,7 +268,7 @@ const IndexPage = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="section">
+      <section id="register" className="section">
         <div className="container">
           <div className="box has-background-primary-light">
             <div className="columns is-vcentered">
@@ -279,9 +279,9 @@ const IndexPage = () => {
                 </p>
               </div>
               <div className="column is-4 has-text-centered">
-                <a href="#register" className="button is-primary is-large">
+                <p className="button is-primary is-large" role="status" aria-live="polite">
                   <strong>Register Now (Coming Soon!)</strong>
-                </a>
+                </p>
               </div>
             </div>
           </div>

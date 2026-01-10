@@ -8,6 +8,9 @@ const Layout = ({ children }) => {
 
   return (
     <div className="site-wrapper">
+      <a href="#main-content" className="skip-to-main">
+        Skip to main content
+      </a>
       <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
         <div className="container">
           <div className="navbar-brand">
@@ -22,7 +25,7 @@ const Layout = ({ children }) => {
             <button
               className={`navbar-burger ${isActive ? "is-active" : ""}`}
               aria-label="menu"
-              aria-expanded="false"
+              aria-expanded={isActive}
               onClick={() => setIsActive(!isActive)}
             >
               <span aria-hidden="true"></span>
@@ -69,7 +72,7 @@ const Layout = ({ children }) => {
         </div>
       </nav>
 
-      <main>{children}</main>
+      <main id="main-content">{children}</main>
 
       <footer className="footer has-background-primary has-text-white-ter">
         <div className="container">

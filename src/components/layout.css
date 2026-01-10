@@ -241,3 +241,44 @@ main {
   bottom: 0;
   background: linear-gradient(135deg, rgba(50, 108, 229, 0.85) 0%, rgba(92, 124, 250, 0.85) 100%);
 }
+
+/* Skip to main content link for accessibility */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skip-to-main:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+}
+
+/* Focus indicators for accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid #ffa500;
+  outline-offset: 2px;
+}
+
+/* Ensure focus is visible on interactive elements */
+.navbar-item:focus,
+.button:focus {
+  outline: 3px solid #ffa500;
+  outline-offset: 2px;
+}
+
+/* High contrast focus for navbar items on blue background */
+.navbar.is-primary .navbar-item:focus {
+  outline-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
