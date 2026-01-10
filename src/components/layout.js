@@ -33,28 +33,28 @@ const Layout = ({ children }) => {
 
           <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
             <div className="navbar-end">
-              <Link to="/about" className="navbar-item">
+              <Link to="/about" className="navbar-item has-text-white has-text-weight-bold">
                 About
               </Link>
-              <Link to="/schedule" className="navbar-item">
+              <Link to="/schedule" className="navbar-item has-text-white has-text-weight-bold">
                 Schedule
               </Link>
-              <Link to="/speakers" className="navbar-item">
+              <Link to="/speakers" className="navbar-item has-text-white has-text-weight-bold">
                 Speakers
               </Link>
-              <Link to="/sponsors" className="navbar-item">
+              <Link to="/sponsors" className="navbar-item has-text-white has-text-weight-bold">
                 Sponsors
               </Link>
-              <Link to="/community" className="navbar-item">
+              <Link to="/community" className="navbar-item has-text-white has-text-weight-bold">
                 Community
               </Link>
-              <Link to="/venue" className="navbar-item">
+              <Link to="/venue" className="navbar-item has-text-white has-text-weight-bold">
                 Venue
               </Link>
-              <Link to="/team" className="navbar-item">
+              <Link to="/team" className="navbar-item has-text-white has-text-weight-bold">
                 Team
               </Link>
-              <Link to="/code-of-conduct" className="navbar-item">
+              <Link to="/code-of-conduct" className="navbar-item has-text-white has-text-weight-bold">
                 Code of Conduct
               </Link>
               <div className="navbar-item">
