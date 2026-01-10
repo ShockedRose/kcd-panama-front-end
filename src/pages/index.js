@@ -16,13 +16,6 @@ const IndexPage = () => {
               <br />
               Toronto 2026
             </h1>
-            <div className="mb-4" style={{ backgroundColor: 'white', padding: '1.5rem', borderRadius: '8px', display: 'inline-block' }}>
-              <img
-                src="/toronto-cncf-stacked-transparent.png"
-                alt="KCD Toronto Logo"
-                style={{ height: '200px', width: 'auto' }}
-              />
-            </div>
             <p className="subtitle is-3">
               Join the cloud native community for a day of learning, networking, and collaboration
             </p>
@@ -40,6 +33,17 @@ const IndexPage = () => {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Logo Section */}
+      <section className="section has-background-white" style={{ padding: '3rem 1.5rem' }}>
+        <div className="container has-text-centered">
+          <img
+            src="/toronto-cncf-horizontal-transparent.png"
+            alt="KCD Toronto Logo"
+            style={{ maxWidth: '600px', width: '100%', height: 'auto' }}
+          />
         </div>
       </section>
 
