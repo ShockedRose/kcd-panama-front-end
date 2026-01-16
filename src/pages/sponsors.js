@@ -70,7 +70,40 @@ const SponsorsPage = () => {
 
           <h2 className="title is-2 mt-6 mb-5 has-text-centered">Sponsorship Tiers</h2>
 
-          <div className="box mb-5" style={{ borderLeft: "6px solid #C0C0C0" }}>
+          <div className="box mb-5" style={{ borderLeft: "6px solid #B9F2FF" }}>
+            <div className="columns">
+              <div className="column is-8">
+                <h3 className="title is-3" style={{ color: "#326ce5" }}>💎 Diamond / Committee Partner</h3>
+                <p className="mb-3">
+                  Our premier partner supporting KCD Toronto 2026. Diamond sponsors demonstrate exceptional leadership and commitment to the cloud native community.
+                </p>
+                <p className="mb-3"><strong>1 exclusive spot (filled)</strong></p>
+                <div className="content">
+                  <p className="has-text-weight-semibold">What's Included:</p>
+                  <ul>
+                    <li>Premium positioning and branding throughout event</li>
+                    <li>10 tickets</li>
+                    <li>Keynote spotlight</li>
+                    <li>5-minute sponsored keynote address</li>
+                    <li>Featured quote in all KCD promotions and social channels</li>
+                    <li>50% Discount code for guests (20 tickets)</li>
+                    <li>Premium branding in all swag and marketing material</li>
+                    <li>Logo on website, all video replays, and event signage</li>
+                    <li>Dedicated sponsor booth in premium location</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="column is-4">
+                <a href="https://www.rbc.com" target="_blank" rel="noopener noreferrer">
+                  <div className="box has-text-centered has-background-white" style={{ border: "3px solid #B9F2FF", padding: "2rem" }}>
+                    <img src="/sponsors/rbc-logo.png" alt="RBC - Diamond/Committee Partner Sponsor" style={{ maxWidth: '100%', height: 'auto' }} />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="box mb-5" style={{ borderLeft: "6px solid #E5E4E2" }}>
             <div className="columns">
               <div className="column is-8">
                 <h3 className="title is-3" style={{ color: "#C0C0C0" }}>🏆 Platinum Sponsors</h3>
@@ -161,7 +194,7 @@ const SponsorsPage = () => {
           <div className="box mb-5" style={{ borderLeft: "6px solid #E91E63" }}>
             <div className="columns">
               <div className="column is-8">
-                <h3 className="title is-3" style={{ color: "#E91E63" }}>💜 Community Partner - In Kind</h3>
+                <h3 className="title is-3" style={{ color: "#E91E63" }}>💜 Community Partners</h3>
                 <p className="mb-3">
                   Community partners, such as cloud native project maintainers, tech community leaders in Open Source, DevOps, or Cloud Native technologies, and Open Source Evangelists, play a unique role as central contributors to our KCD event.
                 </p>

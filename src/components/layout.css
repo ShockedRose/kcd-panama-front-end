@@ -282,3 +282,29 @@ select:focus {
   outline-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+/* Sponsor logo styling and hover effects */
+.sponsor-logo-link {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-logo-link:hover {
+  transform: scale(1.05);
+}
+
+.sponsor-logo-link .box {
+  transition: box-shadow 0.3s ease;
+}
+
+.sponsor-logo-link:hover .box {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive sponsor logo sizing */
+@media screen and (max-width: 768px) {
+  .sponsor-logo-link img {
+    max-width: 150px;
+  }
+}
