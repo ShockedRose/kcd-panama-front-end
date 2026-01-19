@@ -78,25 +78,11 @@ const SponsorsPage = () => {
                   Our premier partner supporting KCD Toronto 2026. Diamond sponsors demonstrate exceptional leadership and commitment to the cloud native community.
                 </p>
                 <p className="mb-3"><strong>1 exclusive spot (filled)</strong></p>
-                <div className="content">
-                  <p className="has-text-weight-semibold">What's Included:</p>
-                  <ul>
-                    <li>Premium positioning and branding throughout event</li>
-                    <li>10 tickets</li>
-                    <li>Keynote spotlight</li>
-                    <li>5-minute sponsored keynote address</li>
-                    <li>Featured quote in all KCD promotions and social channels</li>
-                    <li>50% Discount code for guests (20 tickets)</li>
-                    <li>Premium branding in all swag and marketing material</li>
-                    <li>Logo on website, all video replays, and event signage</li>
-                    <li>Dedicated sponsor booth in premium location</li>
-                  </ul>
-                </div>
               </div>
               <div className="column is-4">
                 <a href="https://www.rbc.com" target="_blank" rel="noopener noreferrer">
                   <div className="box has-text-centered has-background-white" style={{ border: "3px solid #B9F2FF", padding: "2rem" }}>
-                    <img src="/sponsors/rbc-logo.png" alt="RBC - Diamond/Committee Partner Sponsor" style={{ maxWidth: '100%', height: 'auto' }} />
+                    <img src="/sponsors/RBC-logo.png" alt="RBC - Diamond/Committee Partner Sponsor" style={{ maxWidth: '100%', height: 'auto' }} />
                   </div>
                 </a>
               </div>
