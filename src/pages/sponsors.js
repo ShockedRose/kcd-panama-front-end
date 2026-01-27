@@ -149,10 +149,10 @@ const SponsorsPage = () => {
             </div>
           </div>
 
-          <div className="box mb-5" style={{ borderLeft: "6px solid #B87333" }}>
+          <div className="box mb-5" style={{ borderLeft: "6px solid #C0C0C0" }}>
             <div className="columns">
               <div className="column is-8">
-                <h3 className="title is-3" style={{ color: "#B87333" }}>🥉 Silver Sponsors</h3>
+                <h3 className="title is-3" style={{ color: "#C0C0C0" }}>🥉 Silver Sponsors</h3>
                 <p className="mb-3">
                   Silver sponsors are important contributors to the conference. They represent companies who believe in cloud native technologies and experience daily their benefits for their software and platforms (or those from their customers!).
                 </p>
@@ -169,10 +169,11 @@ const SponsorsPage = () => {
                 </div>
               </div>
               <div className="column is-4">
-                <div className="box has-text-centered has-background-light" style={{ border: "2px dashed #ccc", padding: "3rem" }}>
-                  <p className="has-text-grey is-size-5">Your Logo Here</p>
-                  <p className="has-text-grey is-size-7 mt-2">(12 spots available)</p>
-                </div>
+                <a href="https://tremolo.io" target="_blank" rel="noopener noreferrer">
+                  <div className="box has-text-centered has-background-white" style={{ border: "3px solid #C0C0C0", padding: "2rem" }}>
+                    <img src="/sponsors/ts-logo-300w.png" alt="Tremolo Security - Silver Sponsor" style={{ maxWidth: '100%', height: 'auto' }} />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
