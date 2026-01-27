@@ -123,7 +123,7 @@ const SponsorsPage = () => {
           <div className="box mb-5" style={{ borderLeft: "6px solid #FFD700" }}>
             <div className="columns">
               <div className="column is-8">
-                <h3 className="title is-3" style={{ color: "#FFD700" }}>🥈 Gold Sponsors</h3>
+                <h3 className="title is-3" style={{ color: "#FFD700" }}>🥇 Gold Sponsors</h3>
                 <p className="mb-3">
                   Gold sponsors form the backbone of the conference backers. They represent companies that believe the strongest in the Cloud Native movement and have the financial means and the willingness to support it.
                 </p>
@@ -152,7 +152,7 @@ const SponsorsPage = () => {
           <div className="box mb-5" style={{ borderLeft: "6px solid #C0C0C0" }}>
             <div className="columns">
               <div className="column is-8">
-                <h3 className="title is-3" style={{ color: "#C0C0C0" }}>🥉 Silver Sponsors</h3>
+                <h3 className="title is-3" style={{ color: "#C0C0C0" }}>🥈 Silver Sponsors</h3>
                 <p className="mb-3">
                   Silver sponsors are important contributors to the conference. They represent companies who believe in cloud native technologies and experience daily their benefits for their software and platforms (or those from their customers!).
                 </p>
@@ -195,9 +195,11 @@ const SponsorsPage = () => {
                 </div>
               </div>
               <div className="column is-4">
-                <div className="box has-text-centered has-background-light" style={{ border: "2px dashed #ccc", padding: "3rem" }}>
-                  <p className="has-text-grey is-size-5">Your Logo Here</p>
-                </div>
+                <a href="https://www.cncf.io" target="_blank" rel="noopener noreferrer">
+                  <div className="box has-text-centered has-background-white" style={{ border: "3px solid #E91E63", padding: "2rem" }}>
+                    <img src="/sponsors/cncf-color.png" alt="CNCF - Community Partner" style={{ maxWidth: '100%', height: 'auto' }} />
+                  </div>
+                </a>
               </div>
             </div>
           </div>

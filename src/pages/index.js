@@ -289,6 +289,34 @@ const IndexPage = () => {
             </div>
           </div>
 
+          {/* Silver Partners */}
+          <div className="mb-6">
+            <h3 className="title is-4 has-text-centered mb-4">Silver Partners</h3>
+            <div className="columns is-centered">
+              <div className="column is-3 has-text-centered">
+                <a href="https://tremolo.io" target="_blank" rel="noopener noreferrer" className="sponsor-logo-link">
+                  <div className="box" style={{ padding: '2rem', backgroundColor: 'white', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <img src="/sponsors/ts-logo-300w.png" alt="Tremolo Security - Silver Partner" style={{ maxWidth: '200px', width: '100%', height: 'auto' }} />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Community Partners */}
+          <div className="mb-6">
+            <h3 className="title is-4 has-text-centered mb-4">Community Partners</h3>
+            <div className="columns is-centered">
+              <div className="column is-3 has-text-centered">
+                <a href="https://www.cncf.io" target="_blank" rel="noopener noreferrer" className="sponsor-logo-link">
+                  <div className="box" style={{ padding: '2rem', backgroundColor: 'white', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <img src="/sponsors/cncf-color.png" alt="CNCF - Community Partner" style={{ maxWidth: '200px', width: '100%', height: 'auto' }} />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
           {/* CTA Button */}
           <div className="has-text-centered mt-6">
             <a href="/sponsors" className="button is-primary is-large">
