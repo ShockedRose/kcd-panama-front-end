@@ -25,8 +25,8 @@ const IndexPage = () => {
               </p>
             </div>
             <div className="buttons is-centered mt-5">
-              <a href="#register" className="button is-light is-large">
-                <strong>Register Now (Coming Soon!)</strong>
+              <a href="https://community.cncf.io/events/details/cncf-kcd-toronto-presents-kcd-toronto-2026/" target="_blank" rel="noopener noreferrer" className="button is-light is-large">
+                <strong>Get Tickets</strong>
               </a>
               <a href="/sponsors" className="button is-outlined is-light is-large">
                 <strong>Become a Sponsor</strong>
@@ -338,9 +338,9 @@ const IndexPage = () => {
                 </p>
               </div>
               <div className="column is-4 has-text-centered">
-                <p className="button is-primary is-large" role="status" aria-live="polite">
-                  <strong>Register Now (Coming Soon!)</strong>
-                </p>
+                <a href="https://community.cncf.io/events/details/cncf-kcd-toronto-presents-kcd-toronto-2026/" target="_blank" rel="noopener noreferrer" className="button is-primary is-large">
+                  <strong>Get Tickets</strong>
+                </a>
               </div>
             </div>
           </div>
