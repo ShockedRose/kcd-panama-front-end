@@ -25,7 +25,7 @@ const SponsorsPage = () => {
               <div className="has-text-centered mt-5">
                 <div className="buttons is-centered">
                   <a
-                    href="/KCD Toronto Sponsor Prospectus 2026.pdf"
+                    href="/KCD Toronto 2026 Sponsor Prospectus v2.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="button is-primary is-large"
