@@ -25,7 +25,9 @@
     "gatsby-plugin-sitemap": "^6.15.0",
     "gatsby-source-filesystem": "^5.15.0",
     "gatsby-transformer-sharp": "^5.15.0",
+    "i18next": "^25.8.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-i18next": "^16.5.4"
   }
 }

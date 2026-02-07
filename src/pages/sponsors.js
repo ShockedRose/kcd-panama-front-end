@@ -1,14 +1,22 @@
 import * as React from "react"
+import { useTranslation } from "react-i18next"
 import Layout from "../components/layout"
 
 const SponsorsPage = () => {
+  const { t } = useTranslation()
+  const whyItems = t("sponsors.whyItems", { returnObjects: true })
+  const platinumIncluded = t("sponsors.platinumIncluded", { returnObjects: true })
+  const goldIncluded = t("sponsors.goldIncluded", { returnObjects: true })
+  const silverIncluded = t("sponsors.silverIncluded", { returnObjects: true })
+  const communityIncluded = t("sponsors.communityIncluded", { returnObjects: true })
+
   return (
     <Layout>
       <section className="hero is-primary">
         <div className="hero-body">
           <div className="container">
-            <h1 className="title is-1">Sponsors</h1>
-            <p className="subtitle is-3">Support KCD Panama 2026</p>
+            <h1 className="title is-1">{t("sponsors.heroTitle")}</h1>
+            <p className="subtitle is-3">{t("sponsors.heroSubtitle")}</p>
           </div>
         </div>
       </section>
@@ -16,11 +24,10 @@ const SponsorsPage = () => {
       <section className="section">
         <div className="container">
           <div className="box has-background-info-light">
-            <h2 className="title is-3 has-text-centered">Become a Sponsor</h2>
+            <h2 className="title is-3 has-text-centered">{t("sponsors.becomeTitle")}</h2>
             <div className="content">
               <p className="has-text-centered is-size-5">
-                KCD Panama 2026 is made possible by the generous support of our sponsors. By sponsoring KCD Panama,
-                you'll connect with the Canadian cloud native community and showcase your commitment to open source innovation.
+                {t("sponsors.becomeBody")}
               </p>
               <div className="has-text-centered mt-5">
                 <div className="buttons is-centered">
@@ -30,54 +37,38 @@ const SponsorsPage = () => {
                     rel="noopener noreferrer"
                     className="button is-primary is-large"
                   >
-                    <strong>Download Sponsorship Prospectus (PDF)</strong>
+                    <strong>{t("sponsors.prospectusCta")}</strong>
                   </a>
                   <a href="mailto:Panama-org@kubernetescommunitydays.org" className="button is-outlined is-primary is-large">
-                    <strong>Contact Us</strong>
+                    <strong>{t("sponsors.contactCta")}</strong>
                   </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <h2 className="title is-2 mt-6 mb-5">Why Sponsor?</h2>
+          <h2 className="title is-2 mt-6 mb-5">{t("sponsors.whyTitle")}</h2>
           <div className="columns is-multiline">
-            <div className="column is-6">
-              <div className="box">
-                <h3 className="title is-4">Brand Visibility</h3>
-                <p>Get your brand in front of hundreds of cloud native professionals</p>
+            {whyItems.map((item, index) => (
+              <div className="column is-6" key={`${item.title}-${index}`}>
+                <div className="box">
+                  <h3 className="title is-4">{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
               </div>
-            </div>
-            <div className="column is-6">
-              <div className="box">
-                <h3 className="title is-4">Community Engagement</h3>
-                <p>Connect directly with developers, architects, and decision-makers</p>
-              </div>
-            </div>
-            <div className="column is-6">
-              <div className="box">
-                <h3 className="title is-4">Talent Acquisition</h3>
-                <p>Meet potential candidates in the cloud native space</p>
-              </div>
-            </div>
-            <div className="column is-6">
-              <div className="box">
-                <h3 className="title is-4">Thought Leadership</h3>
-                <p>Position your company as a leader in cloud native technologies</p>
-              </div>
-            </div>
+            ))}
           </div>
 
-          <h2 className="title is-2 mt-6 mb-5 has-text-centered">Sponsorship Tiers</h2>
+          <h2 className="title is-2 mt-6 mb-5 has-text-centered">{t("sponsors.tiersTitle")}</h2>
 
           <div className="box mb-5" style={{ borderLeft: "6px solid #B9F2FF" }}>
             <div className="columns">
               <div className="column is-8">
-                <h3 className="title is-3" style={{ color: "#326ce5" }}>💎 Diamond / Committee Partner</h3>
+                <h3 className="title is-3" style={{ color: "#326ce5" }}>{t("sponsors.diamondTitle")}</h3>
                 <p className="mb-3">
-                  Our premier partner supporting KCD Panama 2026. Diamond sponsors demonstrate exceptional leadership and commitment to the cloud native community.
+                  {t("sponsors.diamondBody")}
                 </p>
-                <p className="mb-3"><strong>1 exclusive spot (filled)</strong></p>
+                <p className="mb-3"><strong>{t("sponsors.diamondSpots")}</strong></p>
               </div>
               <div className="column is-4">
                 <a href="https://www.rbc.com" target="_blank" rel="noopener noreferrer">
@@ -92,29 +83,24 @@ const SponsorsPage = () => {
           <div className="box mb-5" style={{ borderLeft: "6px solid #E5E4E2" }}>
             <div className="columns">
               <div className="column is-8">
-                <h3 className="title is-3" style={{ color: "#C0C0C0" }}>🏆 Platinum Sponsors</h3>
+                <h3 className="title is-3" style={{ color: "#C0C0C0" }}>{t("sponsors.platinumTitle")}</h3>
                 <p className="mb-3">
-                  Platinum sponsors have the biggest impact on the conference. They represent companies for which Cloud Native approach is central in the way they implement their activity.
+                  {t("sponsors.platinumBody")}
                 </p>
-                <p className="mb-3"><strong>6 available spots</strong></p>
+                <p className="mb-3"><strong>{t("sponsors.platinumSpots")}</strong></p>
                 <div className="content">
-                  <p className="has-text-weight-semibold">What's Included:</p>
+                  <p className="has-text-weight-semibold">{t("sponsors.platinumIncludedTitle")}</p>
                   <ul>
-                    <li>Extra Large booth</li>
-                    <li>6 tickets</li>
-                    <li>Keynote mention</li>
-                    <li>3-minute sponsored Keynote</li>
-                    <li>Quote in KCD promotions and social channels</li>
-                    <li>30% Discount code for guests (10 tickets)</li>
-                    <li>Branding in all swag and marketing material</li>
-                    <li>Logo on website and all video replays</li>
+                    {platinumIncluded.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
               <div className="column is-4">
                 <div className="box has-text-centered has-background-light" style={{ border: "2px dashed #ccc", padding: "3rem" }}>
-                  <p className="has-text-grey is-size-5">Your Logo Here</p>
-                  <p className="has-text-grey is-size-7 mt-2">(6 spots available)</p>
+                  <p className="has-text-grey is-size-5">{t("sponsors.platinumPlaceholder")}</p>
+                  <p className="has-text-grey is-size-7 mt-2">{t("sponsors.platinumPlaceholderNote")}</p>
                 </div>
               </div>
             </div>
@@ -123,27 +109,24 @@ const SponsorsPage = () => {
           <div className="box mb-5" style={{ borderLeft: "6px solid #FFD700" }}>
             <div className="columns">
               <div className="column is-8">
-                <h3 className="title is-3" style={{ color: "#FFD700" }}>🥇 Gold Sponsors</h3>
+                <h3 className="title is-3" style={{ color: "#FFD700" }}>{t("sponsors.goldTitle")}</h3>
                 <p className="mb-3">
-                  Gold sponsors form the backbone of the conference backers. They represent companies that believe the strongest in the Cloud Native movement and have the financial means and the willingness to support it.
+                  {t("sponsors.goldBody")}
                 </p>
-                <p className="mb-3"><strong>10 available spots</strong></p>
+                <p className="mb-3"><strong>{t("sponsors.goldSpots")}</strong></p>
                 <div className="content">
-                  <p className="has-text-weight-semibold">What's Included:</p>
+                  <p className="has-text-weight-semibold">{t("sponsors.goldIncludedTitle")}</p>
                   <ul>
-                    <li>Large booth</li>
-                    <li>4 tickets</li>
-                    <li>Quote in KCD promotions and social channels</li>
-                    <li>30% Discount code for guests (10 tickets)</li>
-                    <li>Branding in all swag and marketing material</li>
-                    <li>Logo on website and video replays</li>
+                    {goldIncluded.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
               <div className="column is-4">
                 <div className="box has-text-centered has-background-light" style={{ border: "2px dashed #ccc", padding: "3rem" }}>
-                  <p className="has-text-grey is-size-5">Your Logo Here</p>
-                  <p className="has-text-grey is-size-7 mt-2">(10 spots available)</p>
+                  <p className="has-text-grey is-size-5">{t("sponsors.goldPlaceholder")}</p>
+                  <p className="has-text-grey is-size-7 mt-2">{t("sponsors.goldPlaceholderNote")}</p>
                 </div>
               </div>
             </div>
@@ -152,19 +135,17 @@ const SponsorsPage = () => {
           <div className="box mb-5" style={{ borderLeft: "6px solid #C0C0C0" }}>
             <div className="columns">
               <div className="column is-8">
-                <h3 className="title is-3" style={{ color: "#C0C0C0" }}>🥈 Silver Sponsors</h3>
+                <h3 className="title is-3" style={{ color: "#C0C0C0" }}>{t("sponsors.silverTitle")}</h3>
                 <p className="mb-3">
-                  Silver sponsors are important contributors to the conference. They represent companies who believe in cloud native technologies and experience daily their benefits for their software and platforms (or those from their customers!).
+                  {t("sponsors.silverBody")}
                 </p>
-                <p className="mb-3"><strong>12 available spots</strong></p>
+                <p className="mb-3"><strong>{t("sponsors.silverSpots")}</strong></p>
                 <div className="content">
-                  <p className="has-text-weight-semibold">What's Included:</p>
+                  <p className="has-text-weight-semibold">{t("sponsors.silverIncludedTitle")}</p>
                   <ul>
-                    <li>Medium Booth</li>
-                    <li>2 tickets</li>
-                    <li>30% Discount code for guests (4 tickets)</li>
-                    <li>Branding in all swag and marketing material</li>
-                    <li>Logo on website</li>
+                    {silverIncluded.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -181,16 +162,16 @@ const SponsorsPage = () => {
           <div className="box mb-5" style={{ borderLeft: "6px solid #E91E63" }}>
             <div className="columns">
               <div className="column is-8">
-                <h3 className="title is-3" style={{ color: "#E91E63" }}>💜 Community Partners</h3>
+                <h3 className="title is-3" style={{ color: "#E91E63" }}>{t("sponsors.communityTitle")}</h3>
                 <p className="mb-3">
-                  Community partners, such as cloud native project maintainers, tech community leaders in Open Source, DevOps, or Cloud Native technologies, and Open Source Evangelists, play a unique role as central contributors to our KCD event.
+                  {t("sponsors.communityBody")}
                 </p>
                 <div className="content">
-                  <p className="has-text-weight-semibold">What's Included:</p>
+                  <p className="has-text-weight-semibold">{t("sponsors.communityIncludedTitle")}</p>
                   <ul>
-                    <li>1 Ticket</li>
-                    <li>Presence in the community zone: a special place at the venue</li>
-                    <li>Logo on website</li>
+                    {communityIncluded.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -205,12 +186,13 @@ const SponsorsPage = () => {
           </div>
 
           <div className="box has-background-light mt-6">
-            <h3 className="title is-4">Interested in Sponsoring?</h3>
+            <h3 className="title is-4">{t("sponsors.interestedTitle")}</h3>
             <p>
-              Contact us to discuss custom opportunities including lunch sponsorship, coffee breaks, swag bags, and more.
+              {t("sponsors.interestedBody")}
             </p>
             <p className="mt-3">
-              <strong>Email:</strong> <a href="mailto:Panama-org@kubernetescommunitydays.org">Panama-org@kubernetescommunitydays.org</a>
+              <strong>{t("sponsors.emailLabel")}</strong>{" "}
+              <a href="mailto:Panama-org@kubernetescommunitydays.org">Panama-org@kubernetescommunitydays.org</a>
             </p>
           </div>
         </div>
@@ -221,4 +203,7 @@ const SponsorsPage = () => {
 
 export default SponsorsPage
 
-export const Head = () => <title>Sponsors - KCD Panama 2026</title>
+export const Head = () => {
+  const { t } = useTranslation()
+  return <title>{t("head.sponsors")}</title>
+}

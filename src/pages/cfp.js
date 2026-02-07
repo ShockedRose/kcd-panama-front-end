@@ -1,15 +1,23 @@
 import * as React from "react"
+import { useTranslation } from "react-i18next"
 import Layout from "../components/layout"
 
 const CFPPage = () => {
+  const { t } = useTranslation()
+  const topicsLeft = t("cfp.topicsLeft", { returnObjects: true })
+  const topicsRight = t("cfp.topicsRight", { returnObjects: true })
+  const sessionFormats = t("cfp.sessionFormats", { returnObjects: true })
+  const whySpeak = t("cfp.whySpeak", { returnObjects: true })
+  const dates = t("cfp.dates", { returnObjects: true })
+
   return (
     <Layout>
       <section className="hero is-primary is-medium">
         <div className="hero-body">
           <div className="container has-text-centered">
-            <h1 className="title is-1">Call for Speakers</h1>
-            <p className="subtitle is-3">Join Panama's largest CNCF-supported Kubernetes event</p>
-            <p className="subtitle is-5">May 13, 2026 • The Quay, Panama</p>
+            <h1 className="title is-1">{t("cfp.heroTitle")}</h1>
+            <p className="subtitle is-3">{t("cfp.heroSubtitle")}</p>
+            <p className="subtitle is-5">{t("cfp.heroDetails")}</p>
           </div>
         </div>
       </section>
@@ -19,46 +27,36 @@ const CFPPage = () => {
           <div className="columns">
             <div className="column is-8 is-offset-2">
               <div className="box has-background-info-light mb-5">
-                <h2 className="title is-3 has-text-centered">We Want to Hear From You!</h2>
+                <h2 className="title is-3 has-text-centered">{t("cfp.introTitle")}</h2>
                 <div className="content">
                   <p className="is-size-5 has-text-centered">
-                    Kubernetes Community Days Panama will gather over <strong>350 developers, platform engineers,
-                    architects, leaders and IT professionals</strong> for a full day dedicated to cloud-native
-                    technology and open source innovation.
+                    {t("cfp.introBody")}
                   </p>
                   <p className="is-size-5 has-text-centered mt-4">
-                    With <strong>25+ speakers and 20+ sessions</strong>, we're creating a vendor-neutral,
-                    learning-focused environment where the community shares real-world experiences.
+                    {t("cfp.introBody2")}
                   </p>
                 </div>
               </div>
 
               <div className="box mb-5">
-                <h3 className="title is-4 has-text-centered">What We're Looking For</h3>
+                <h3 className="title is-4 has-text-centered">{t("cfp.lookingTitle")}</h3>
                 <div className="content">
                   <p className="has-text-centered mb-4">
-                    We seek <strong>practical, real lessons — not product pitches</strong>. Share your successes,
-                    failures, and everything you learned along the way.
+                    {t("cfp.lookingBody")}
                   </p>
                   <div className="columns is-multiline">
                     <div className="column is-6">
                       <ul>
-                        <li><strong>Platform Engineering</strong> - Internal platforms, developer experience</li>
-                        <li><strong>Kubernetes Operations</strong> - Scaling, troubleshooting, best practices</li>
-                        <li><strong>AI/ML/MLOps</strong> - Machine learning on cloud native infrastructure</li>
-                        <li><strong>Application Development</strong> - Cloud native patterns and practices</li>
-                        <li><strong>Security</strong> - Zero trust, policy enforcement, compliance</li>
-                        <li><strong>Networking</strong> - Service mesh, ingress, network policies</li>
+                        {topicsLeft.map((topic) => (
+                          <li key={topic}>{topic}</li>
+                        ))}
                       </ul>
                     </div>
                     <div className="column is-6">
                       <ul>
-                        <li><strong>Observability</strong> - Monitoring, logging, tracing</li>
-                        <li><strong>Data & Storage</strong> - Stateful workloads, databases</li>
-                        <li><strong>Community Experiences</strong> - Building cloud native communities</li>
-                        <li><strong>Beginner Foundations</strong> - Getting started with Kubernetes</li>
-                        <li><strong>Diversity Initiatives</strong> - Inclusive cloud native communities</li>
-                        <li><strong>Emerging Technologies</strong> - WebAssembly, eBPF, and more</li>
+                        {topicsRight.map((topic) => (
+                          <li key={topic}>{topic}</li>
+                        ))}
                       </ul>
                     </div>
                   </div>
@@ -66,89 +64,61 @@ const CFPPage = () => {
               </div>
 
               <div className="box mb-5">
-                <h3 className="title is-4 has-text-centered">Session Formats</h3>
+                <h3 className="title is-4 has-text-centered">{t("cfp.sessionFormatsTitle")}</h3>
                 <div className="content">
                   <div className="columns">
-                    <div className="column is-4">
-                      <div className="has-text-centered">
-                        <p className="title is-5">⚡ Lightning Demos</p>
-                        <p className="subtitle is-6">10 minutes</p>
-                        <p>Quick technical walkthroughs showcasing concepts or emerging tech</p>
+                    {sessionFormats.map((format) => (
+                      <div className="column is-4" key={format.title}>
+                        <div className="has-text-centered">
+                          <p className="title is-5">{format.title}</p>
+                          <p className="subtitle is-6">{format.duration}</p>
+                          <p>{format.description}</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="column is-4">
-                      <div className="has-text-centered">
-                        <p className="title is-5">💡 Standard Talks</p>
-                        <p className="subtitle is-6">25 minutes</p>
-                        <p>Case studies, best practices, architectural patterns, and lessons learned</p>
-                      </div>
-                    </div>
-                    <div className="column is-4">
-                      <div className="has-text-centered">
-                        <p className="title is-5">🛠️ Workshops</p>
-                        <p className="subtitle is-6">50 minutes</p>
-                        <p>Hands-on sessions where attendees build or practice tangible skills</p>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
 
               <div className="box mb-5 has-background-light">
-                <h3 className="title is-4 has-text-centered">Why Speak at KCD Panama?</h3>
+                <h3 className="title is-4 has-text-centered">{t("cfp.whySpeakTitle")}</h3>
                 <div className="content">
                   <div className="columns">
-                    <div className="column is-4 has-text-centered">
-                      <p className="title is-1 has-text-primary">🎟️</p>
-                      <p className="mt-3"><strong>Free Event Access</strong></p>
-                      <p>Complimentary admission for all speakers</p>
-                    </div>
-                    <div className="column is-4 has-text-centered">
-                      <p className="title is-1 has-text-primary">👥</p>
-                      <p className="mt-3"><strong>Community Platform</strong></p>
-                      <p>Share knowledge in a vendor-neutral, learning-focused environment</p>
-                    </div>
-                    <div className="column is-4 has-text-centered">
-                      <p className="title is-1 has-text-primary">📹</p>
-                      <p className="mt-3"><strong>Recorded Sessions</strong></p>
-                      <p>Your talk published on YouTube for the community</p>
-                    </div>
+                    {whySpeak.map((item) => (
+                      <div className="column is-4 has-text-centered" key={item.title}>
+                        <p className="title is-1 has-text-primary">{item.emoji}</p>
+                        <p className="mt-3"><strong>{item.title}</strong></p>
+                        <p>{item.description}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
 
               <div className="box mb-5">
-                <h3 className="title is-4 has-text-centered">Important Dates</h3>
+                <h3 className="title is-4 has-text-centered">{t("cfp.datesTitle")}</h3>
                 <div className="content">
                   <div className="columns has-text-centered">
-                    <div className="column is-4">
-                      <p className="title is-6">CFP Opens</p>
-                      <p className="subtitle is-5">December 29, 2025</p>
-                      <p className="has-text-grey">9:00 PM EST</p>
-                    </div>
-                    <div className="column is-4">
-                      <p className="title is-6">CFP Closes</p>
-                      <p className="subtitle is-5">February 16, 2026</p>
-                      <p className="has-text-grey">11:59 PM EST</p>
-                    </div>
-                    <div className="column is-4">
-                      <p className="title is-6">Event Date</p>
-                      <p className="subtitle is-5">May 13, 2026</p>
-                      <p className="has-text-grey">The Quay, Panama</p>
-                    </div>
+                    {dates.map((date) => (
+                      <div className="column is-4" key={date.title}>
+                        <p className="title is-6">{date.title}</p>
+                        <p className="subtitle is-5">{date.date}</p>
+                        <p className="has-text-grey">{date.time}</p>
+                      </div>
+                    ))}
                   </div>
                   <div className="notification is-success is-light has-text-centered mt-4">
-                    <strong>CFP is now open!</strong> Submit your proposal before February 16, 2026
+                    <strong>{t("cfp.cfpOpen")}</strong>
                   </div>
                 </div>
               </div>
 
               {/* Sessionize CFP Form Link */}
               <div className="box has-background-primary-light">
-                <h2 className="title is-2 has-text-centered mb-4">Ready to Share Your Story?</h2>
+                <h2 className="title is-2 has-text-centered mb-4">{t("cfp.readyTitle")}</h2>
                 <div className="content has-text-centered">
                   <p className="is-size-5 mb-5">
-                    Join 25+ speakers in sharing practical, real-world cloud native experiences with Panama's community.
+                    {t("cfp.readyBody")}
                   </p>
                   <a
                     href="https://sessionize.com/kcd-Panama-2026"
@@ -156,24 +126,23 @@ const CFPPage = () => {
                     rel="noopener noreferrer"
                     className="button is-primary is-large"
                   >
-                    <strong>Submit Your Proposal Now</strong>
+                    <strong>{t("cfp.readyCta")}</strong>
                   </a>
                   <p className="mt-4 has-text-grey">
-                    <small>Submissions managed through Sessionize • Closes February 16, 2026</small>
+                    <small>{t("cfp.readyNote")}</small>
                   </p>
                 </div>
               </div>
 
               <div className="box has-background-light mt-5">
-                <h3 className="title is-5 has-text-centered">Need Help or Have Questions?</h3>
+                <h3 className="title is-5 has-text-centered">{t("cfp.helpTitle")}</h3>
                 <p className="has-text-centered">
-                  We're here to help! Reach out to our speaker team at{" "}
+                  {t("cfp.helpBody")}{" "}
                   <a href="mailto:Panama-org@kubernetescommunitydays.org"><strong>Panama-org@kubernetescommunitydays.org</strong></a>
                 </p>
                 <p className="has-text-centered mt-3 has-text-grey">
                   <small>
-                    Remember: We're looking for clear learning outcomes, technical depth, and real experiences —
-                    both successes and failures.
+                    {t("cfp.reminder")}
                   </small>
                 </p>
               </div>
@@ -187,4 +156,7 @@ const CFPPage = () => {
 
 export default CFPPage
 
-export const Head = () => <title>Call for Proposals - KCD Panama 2026</title>
+export const Head = () => {
+  const { t } = useTranslation()
+  return <title>{t("head.cfp")}</title>
+}

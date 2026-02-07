@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { useTranslation } from "react-i18next"
 
 const pageStyles = {
   color: "#232129",
@@ -24,21 +25,23 @@ const codeStyles = {
 }
 
 const NotFoundPage = () => {
+  const { t } = useTranslation()
+
   return (
     <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
+      <h1 style={headingStyles}>{t("notFound.title")}</h1>
       <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
+        {t("notFound.body")}
         <br />
         {process.env.NODE_ENV === "development" ? (
           <>
             <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
+            {t("notFound.devHint")} <code style={codeStyles}>src/pages/</code>.
             <br />
           </>
         ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <Link to="/">{t("notFound.goHome")}</Link>.
       </p>
     </main>
   )
@@ -46,4 +49,7 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head = () => <title>Not found</title>
+export const Head = () => {
+  const { t } = useTranslation()
+  return <title>{t("head.notFound")}</title>
+}

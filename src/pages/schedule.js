@@ -1,28 +1,18 @@
 import * as React from "react"
+import { useTranslation } from "react-i18next"
 import Layout from "../components/layout"
 
 const SchedulePage = () => {
-  const scheduleItems = [
-    { time: "8:00 AM - 9:00 AM", title: "Registration & Breakfast", description: "Check in, grab breakfast, and network with fellow attendees" },
-    { time: "9:00 AM - 9:15 AM", title: "Opening Remarks", speaker: "KCD Panama Organizing Team", description: "Welcome to KCD Panama 2026!" },
-    { time: "9:15 AM - 10:00 AM", title: "Keynote: The Future of Cloud Native", speaker: "TBA", description: "An inspiring keynote exploring the latest trends and innovations" },
-    { time: "10:00 AM - 10:30 AM", title: "Coffee Break & Networking", description: "Connect with speakers and attendees over coffee" },
-    { time: "10:30 AM - 12:00 PM", title: "Technical Talks - Track 1 & Track 2", description: "Parallel technical sessions covering Kubernetes, containers, and more" },
-    { time: "12:00 PM - 1:00 PM", title: "Lunch & Networking", description: "Enjoy lunch and continue conversations with the community" },
-    { time: "1:00 PM - 2:30 PM", title: "Technical Talks - Track 1 & Track 2", description: "More parallel sessions featuring case studies and best practices" },
-    { time: "2:30 PM - 3:00 PM", title: "Afternoon Break", description: "Refreshments and networking" },
-    { time: "3:00 PM - 4:30 PM", title: "Hands-on Workshops", description: "Interactive workshops with cloud native technologies" },
-    { time: "4:30 PM - 5:00 PM", title: "Closing Remarks & Prize Draw", speaker: "KCD Panama Organizing Team", description: "Wrap up the day and announce prize winners" },
-    { time: "5:00 PM - 7:00 PM", title: "After Party", description: "Continue the conversation at our after-event social gathering" },
-  ]
+  const { t } = useTranslation()
+  const scheduleItems = t("schedule.items", { returnObjects: true })
 
   return (
     <Layout>
       <section className="hero is-primary">
         <div className="hero-body">
           <div className="container">
-            <h1 className="title is-1">Event Schedule</h1>
-            <p className="subtitle is-3">TBA 2026 | Panama, ON</p>
+            <h1 className="title is-1">{t("schedule.heroTitle")}</h1>
+            <p className="subtitle is-3">{t("schedule.heroSubtitle")}</p>
           </div>
         </div>
       </section>
@@ -31,12 +21,12 @@ const SchedulePage = () => {
         <div className="container">
           <div className="notification is-info is-light">
             <p className="has-text-centered is-size-5">
-              <strong>Schedule coming soon!</strong> The detailed agenda will be published once our Call for Proposals closes.
+              <strong>{t("schedule.noticeTitle")}</strong> {t("schedule.noticeBody")}
             </p>
           </div>
 
-          <h2 className="title is-2 mt-6 mb-5">Sample Schedule</h2>
-          <p className="subtitle mb-6">Below is a sample schedule to give you an idea of what to expect:</p>
+          <h2 className="title is-2 mt-6 mb-5">{t("schedule.sampleTitle")}</h2>
+          <p className="subtitle mb-6">{t("schedule.sampleSubtitle")}</p>
 
           <div className="timeline">
             {scheduleItems.map((item, index) => (
@@ -71,4 +61,7 @@ const SchedulePage = () => {
 
 export default SchedulePage
 
-export const Head = () => <title>Schedule - KCD Panama 2026</title>
+export const Head = () => {
+  const { t } = useTranslation()
+  return <title>{t("head.schedule")}</title>
+}

@@ -1,14 +1,18 @@
 import * as React from "react"
+import { useTranslation } from "react-i18next"
 import Layout from "../components/layout"
 
 const SpeakersPage = () => {
+  const { t } = useTranslation()
+  const topics = t("speakers.cfpTopics", { returnObjects: true })
+
   return (
     <Layout>
       <section className="hero is-primary">
         <div className="hero-body">
           <div className="container">
-            <h1 className="title is-1">Speakers</h1>
-            <p className="subtitle is-3">Meet our amazing speakers</p>
+            <h1 className="title is-1">{t("speakers.heroTitle")}</h1>
+            <p className="subtitle is-3">{t("speakers.heroSubtitle")}</p>
           </div>
         </div>
       </section>
@@ -16,37 +20,32 @@ const SpeakersPage = () => {
       <section className="section">
         <div className="container">
           <div className="box has-background-info-light">
-            <h2 className="title is-3 has-text-centered">Call for Proposals</h2>
-            <p className="subtitle has-text-centered">We're looking for speakers!</p>
+            <h2 className="title is-3 has-text-centered">{t("speakers.cfpTitle")}</h2>
+            <p className="subtitle has-text-centered">{t("speakers.cfpSubtitle")}</p>
             <div className="content">
               <p className="has-text-centered">
-                Whether you're a Kubernetes expert, a cloud native practitioner, or have an interesting story about
-                your cloud native journey, we want to hear from you.
+                {t("speakers.cfpBody")}
               </p>
-              <p className="has-text-centered"><strong>Topics we're interested in include:</strong></p>
+              <p className="has-text-centered"><strong>{t("speakers.cfpTopicsIntro")}</strong></p>
               <div className="columns">
                 <div className="column is-6 is-offset-3">
                   <ul>
-                    <li>Kubernetes and container orchestration</li>
-                    <li>Cloud native architecture and patterns</li>
-                    <li>Service mesh, observability, and monitoring</li>
-                    <li>CI/CD and GitOps</li>
-                    <li>Platform engineering and developer experience</li>
-                    <li>Security and compliance</li>
-                    <li>Case studies and real-world implementations</li>
+                    {topics.map((topic) => (
+                      <li key={topic}>{topic}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
               <div className="has-text-centered mt-5">
                 <a href="/cfp" className="button is-primary is-large">
-                  <strong>Submit Your Proposal</strong>
+                  <strong>{t("speakers.cfpCta")}</strong>
                 </a>
               </div>
             </div>
           </div>
 
-          <h2 className="title is-2 mt-6 mb-5 has-text-centered">Featured Speakers</h2>
-          <p className="has-text-centered mb-6">Speaker announcements coming soon! Check back after our Call for Proposals closes.</p>
+          <h2 className="title is-2 mt-6 mb-5 has-text-centered">{t("speakers.featuredTitle")}</h2>
+          <p className="has-text-centered mb-6">{t("speakers.featuredSubtitle")}</p>
 
           <div className="columns is-multiline">
             {[1, 2, 3].map((i) => (
@@ -69,9 +68,9 @@ const SpeakersPage = () => {
                         ?
                       </div>
                     </div>
-                    <p className="title is-4">Your Name Here</p>
-                    <p className="subtitle is-6">Speaker</p>
-                    <p>Submit your proposal to be one of our featured speakers!</p>
+                    <p className="title is-4">{t("speakers.placeholderName")}</p>
+                    <p className="subtitle is-6">{t("speakers.placeholderRole")}</p>
+                    <p>{t("speakers.placeholderBody")}</p>
                   </div>
                 </div>
               </div>
@@ -85,4 +84,7 @@ const SpeakersPage = () => {
 
 export default SpeakersPage
 
-export const Head = () => <title>Speakers - KCD Panama 2026</title>
+export const Head = () => {
+  const { t } = useTranslation()
+  return <title>{t("head.speakers")}</title>
+}
