@@ -85,4 +85,4 @@ const SpeakersPage = () => {
 
 export default SpeakersPage
 
-export const Head = () => <title>Speakers - KCD Toronto 2026</title>
+export const Head = () => <title>Speakers - KCD Panama 2026</title>

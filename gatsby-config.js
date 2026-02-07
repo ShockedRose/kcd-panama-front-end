@@ -3,13 +3,13 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `KCD Toronto 2026`,
-    siteUrl: `https://kcdtoronto.ca`
+    title: `KCD Panama 2026`,
+    siteUrl: `https://kcdPanama.ca`
   },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "static/toronto-cncf.png",
+      "icon": "static/Panama-cncf.png",
       "lang": "en"
     }
   }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
