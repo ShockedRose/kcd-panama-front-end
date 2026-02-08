@@ -68,12 +68,12 @@ const TeamPage = () => {
           </div>
 
           <div className="box has-background-info-light mt-6">
-            <h2 className="title is-3 has-text-centered">{t("team.joinTitle")}</h2>
+            <h2 className="title is-3 has-text-centered has-text-dark">{t("team.joinTitle")}</h2>
             <div className="content">
               <p className="has-text-centered">
                 {t("team.joinBody")}
               </p>
-              <p className="has-text-centered"><strong>{t("team.joinIntro")}</strong></p>
+              <p className="has-text-centered"><strong className="has-text-dark">{t("team.joinIntro")}</strong></p>
               <div className="columns">
                 <div className="column is-6 is-offset-3">
                   <ul>
@@ -91,9 +91,9 @@ const TeamPage = () => {
             </div>
           </div>
 
-          <div className="box has-background-light mt-6">
+          <div className="box has-background-light mt-6 has-text-dark">
             <p>
-              <strong>{t("team.questionsTitle")}</strong>{" "}
+              <strong className="has-text-dark">{t("team.questionsTitle")}</strong>{" "}
               {t("team.questionsBody")}{" "}
               <a href="mailto:Panama-org@kubernetescommunitydays.org">Panama-org@kubernetescommunitydays.org</a>
             </p>

@@ -27,15 +27,15 @@ const IndexPage = () => {
             </p>
             <div className="box mt-5" style={{ backgroundColor: 'rgba(255,255,255,0.95)' }}>
               <p className="is-size-4 has-text-dark">
-                <strong>{t("home.hero.dateLabel")}:</strong> {t("home.hero.dateValue")} | <strong>{t("home.hero.locationLabel")}:</strong> {t("home.hero.locationValue")}
+                <strong className="has-text-dark">{t("home.hero.dateLabel")}:</strong> {t("home.hero.dateValue")} | <strong className="has-text-dark">{t("home.hero.locationLabel")}:</strong> {t("home.hero.locationValue")}
               </p>
             </div>
             <div className="buttons is-centered mt-5">
               <a href="https://community.cncf.io/events/details/cncf-kcd-Panama-presents-kcd-Panama-2026/" target="_blank" rel="noopener noreferrer" className="button is-light is-large">
-                <strong>{t("home.hero.ctaTickets")}</strong>
+                <strong className="has-text-dark">{t("home.hero.ctaTickets")}</strong>
               </a>
               <a href="/sponsors" className="button is-outlined is-light is-large">
-                <strong>{t("home.hero.ctaSponsor")}</strong>
+                <strong className="has-text-dark">{t("home.hero.ctaSponsor")}</strong>
               </a>
             </div>
           </div>
@@ -202,21 +202,21 @@ const IndexPage = () => {
       </section>
 
       {/* Sponsors Showcase Section */}
-      <section className="section has-background-light">
+      <section className="section has-background-light" id="sponsors">
         <div className="container">
-          <h2 className="title is-2 has-text-centered mb-5">{t("home.sponsors.title")}</h2>
-          <p className="has-text-centered is-size-5 mb-6">
+          <h2 className="title is-2 has-text-centered mb-5 has-text-dark">{t("home.sponsors.title")}</h2>
+          <p className="has-text-centered is-size-5 mb-6 has-text-dark">
             {t("home.sponsors.subtitle")}
           </p>
 
           {/* Diamond/Committee Partner */}
           <div className="mb-6">
-            <h3 className="title is-4 has-text-centered mb-4">{t("home.sponsors.diamondTitle")}</h3>
+            <h3 className="title is-4 has-text-centered mb-4 has-text-dark">{t("home.sponsors.diamondTitle")}</h3>
             <div className="columns is-centered">
-              <div className="column is-3 has-text-centered">
-                <a href="https://www.rbc.com" target="_blank" rel="noopener noreferrer" className="sponsor-logo-link">
+              <div className="column is-3 has-text-centered has-text-dark">
+                <a href="#sponsors" target="_blank" rel="noopener noreferrer" className="sponsor-logo-link">
                   <div className="box" style={{ padding: '2rem', backgroundColor: 'white', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <img src="/sponsors/RBC-logo.png" alt="RBC - Diamond/Committee Partner Sponsor" style={{ maxWidth: '200px', width: '100%', height: 'auto' }} />
+                    <img src="" alt="sponsor diamond placeholder" style={{ maxWidth: '200px', width: '100%', height: 'auto' }} />
                   </div>
                 </a>
               </div>
@@ -225,12 +225,12 @@ const IndexPage = () => {
 
           {/* Silver Partners */}
           <div className="mb-6">
-            <h3 className="title is-4 has-text-centered mb-4">{t("home.sponsors.silverTitle")}</h3>
+            <h3 className="title is-4 has-text-centered mb-4 has-text-dark">{t("home.sponsors.silverTitle")}</h3>
             <div className="columns is-centered">
-              <div className="column is-3 has-text-centered">
-                <a href="https://tremolo.io" target="_blank" rel="noopener noreferrer" className="sponsor-logo-link">
+              <div className="column is-3 has-text-centered has-text-dark">
+                <a href="#sponsors" target="_blank" rel="noopener noreferrer" className="sponsor-logo-link">
                   <div className="box" style={{ padding: '2rem', backgroundColor: 'white', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <img src="/sponsors/ts-logo-300w.png" alt="Tremolo Security - Silver Partner" style={{ maxWidth: '200px', width: '100%', height: 'auto' }} />
+                    <img src="" alt="sponsor silver placeholder" style={{ maxWidth: '200px', width: '100%', height: 'auto' }} />
                   </div>
                 </a>
               </div>
@@ -239,9 +239,9 @@ const IndexPage = () => {
 
           {/* Community Partners */}
           <div className="mb-6">
-            <h3 className="title is-4 has-text-centered mb-4">{t("home.sponsors.communityTitle")}</h3>
+            <h3 className="title is-4 has-text-centered mb-4 has-text-dark">{t("home.sponsors.communityTitle")}</h3>
             <div className="columns is-centered">
-              <div className="column is-3 has-text-centered">
+              <div className="column is-3 has-text-centered has-text-dark">
                 <a href="https://www.cncf.io" target="_blank" rel="noopener noreferrer" className="sponsor-logo-link">
                   <div className="box" style={{ padding: '2rem', backgroundColor: 'white', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <img src="/sponsors/cncf-color.png" alt="CNCF - Community Partner" style={{ maxWidth: '200px', width: '100%', height: 'auto' }} />
@@ -266,8 +266,8 @@ const IndexPage = () => {
           <div className="box has-background-primary-light">
             <div className="columns is-vcentered">
               <div className="column is-8">
-                <h3 className="title is-3">{t("home.cta.title")}</h3>
-                <p className="subtitle is-5">
+                <h3 className="title is-3 has-text-dark">{t("home.cta.title")}</h3>
+                <p className="subtitle is-5 has-text-dark">
                   {t("home.cta.subtitle")}
                 </p>
               </div>

@@ -100,14 +100,14 @@ const CommunityPage = () => {
           </div>
 
           <div className="box has-background-primary-light mt-6">
-            <h3 className="title is-3 has-text-centered">{t("community.joinTitle")}</h3>
+            <h3 className="title is-3 has-text-centered has-text-dark">{t("community.joinTitle")}</h3>
             <div className="content has-text-centered">
               <p className="is-size-5">
                 {t("community.joinBody")}
               </p>
               <div className="buttons is-centered mt-5">
                 <a
-                  href="https://join.slack.com/t/k8scanada/shared_invite/zt-3mgw5k1cx-TyqvlwwkyPv4EzVEBHnFlA"
+                  href="https://cloud-native.slack.com/archives/C0913H8TSPN"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button is-primary is-large"

@@ -57,7 +57,7 @@ export const resources = {
           dateLabel: "Date",
           dateValue: "May 13, 2026",
           locationLabel: "Location",
-          locationValue: "The Quay, Panama",
+          locationValue: "Panama, Panama",
           ctaTickets: "Get Tickets Here!",
           ctaSponsor: "Become a Sponsor"
         },
@@ -190,7 +190,7 @@ export const resources = {
       cfp: {
         heroTitle: "Call for Speakers",
         heroSubtitle: "Join Panama's largest CNCF-supported Kubernetes event",
-        heroDetails: "May 13, 2026 • The Quay, Panama",
+        heroDetails: "May 13, 2026 • Panama, Panama",
         introTitle: "We Want to Hear From You!",
         introBody:
           "Kubernetes Community Days Panama will gather over 350 developers, platform engineers, architects, leaders and IT professionals for a full day dedicated to cloud-native technology and open source innovation.",
@@ -270,7 +270,7 @@ export const resources = {
           {
             title: "Event Date",
             date: "May 13, 2026",
-            time: "The Quay, Panama"
+            time: "Panama, Panama"
           }
         ],
         cfpOpen:
@@ -560,11 +560,11 @@ export const resources = {
       venue: {
         heroTitle: "Venue",
         heroSubtitle: "Getting to KCD Panama",
-        venueTitle: "The Quay - Panama Region Board of Trade",
-        venueAddress: "100 Queens Quay E, Panama, ON",
+        venueTitle: "Panama - Panama Region Board of Trade",
+        venueAddress: "100 Queens Panama E, Panama, ON",
         venueBody:
-          "Join us on May 13, 2026 at The Quay, a modern waterfront venue located in the heart of downtown Panama with stunning views of Lake Ontario and excellent transit access.",
-        venueAlt: "The Quay Panama Waterfront",
+          "Join us on May 13, 2026 at Panama, a modern waterfront venue located in the heart of downtown Panama with stunning views of Lake Ontario and excellent transit access.",
+        venueAlt: "Panama Panama Waterfront",
         spacesTitle: "Venue Spaces",
         spaces: [
           {
@@ -691,7 +691,7 @@ export const resources = {
           dateLabel: "Fecha",
           dateValue: "13 de mayo de 2026",
           locationLabel: "Ubicación",
-          locationValue: "The Quay, Panama",
+          locationValue: "Panama, Panama",
           ctaTickets: "¡Consigue tus entradas!",
           ctaSponsor: "Conviértete en patrocinador"
         },
@@ -825,7 +825,7 @@ export const resources = {
         heroTitle: "Convocatoria de ponentes",
         heroSubtitle:
           "Únete al mayor evento de Kubernetes respaldado por CNCF en Panama",
-        heroDetails: "13 de mayo de 2026 • The Quay, Panama",
+        heroDetails: "13 de mayo de 2026 • Panama, Panama",
         introTitle: "¡Queremos escucharte!",
         introBody:
           "Kubernetes Community Days Panama reunirá a más de 350 desarrolladores, ingenieros de plataformas, arquitectos, líderes y profesionales de TI para un día completo dedicado a la tecnología cloud native y la innovación de código abierto.",
@@ -905,7 +905,7 @@ export const resources = {
           {
             title: "Fecha del evento",
             date: "13 de mayo de 2026",
-            time: "The Quay, Panama"
+            time: "Panama, Panama"
           }
         ],
         cfpOpen:
@@ -1196,11 +1196,11 @@ export const resources = {
       venue: {
         heroTitle: "Sede",
         heroSubtitle: "Cómo llegar a KCD Panama",
-        venueTitle: "The Quay - Panama Region Board of Trade",
-        venueAddress: "100 Queens Quay E, Panama, ON",
+        venueTitle: "Panama - Panama Region Board of Trade",
+        venueAddress: "100 Queens Panama E, Panama, ON",
         venueBody:
-          "Acompáñanos el 13 de mayo de 2026 en The Quay, una sede moderna frente al agua ubicada en el corazón del centro de Panama, con impresionantes vistas al lago Ontario y excelente acceso al transporte.",
-        venueAlt: "The Quay Panama Waterfront",
+          "Acompáñanos el 13 de mayo de 2026 en Panama, una sede moderna frente al agua ubicada en el corazón del centro de Panama, con impresionantes vistas al lago Ontario y excelente acceso al transporte.",
+        venueAlt: "Panama Panama Waterfront",
         spacesTitle: "Espacios de la sede",
         spaces: [
           {

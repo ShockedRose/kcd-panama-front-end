@@ -20,13 +20,13 @@ const SpeakersPage = () => {
       <section className="section">
         <div className="container">
           <div className="box has-background-info-light">
-            <h2 className="title is-3 has-text-centered">{t("speakers.cfpTitle")}</h2>
-            <p className="subtitle has-text-centered">{t("speakers.cfpSubtitle")}</p>
+            <h2 className="title is-3 has-text-centered has-text-dark">{t("speakers.cfpTitle")}</h2>
+            <p className="subtitle has-text-centered has-text-dark">{t("speakers.cfpSubtitle")}</p>
             <div className="content">
               <p className="has-text-centered">
                 {t("speakers.cfpBody")}
               </p>
-              <p className="has-text-centered"><strong>{t("speakers.cfpTopicsIntro")}</strong></p>
+              <p className="has-text-centered"><strong className="has-text-dark">{t("speakers.cfpTopicsIntro")}</strong></p>
               <div className="columns">
                 <div className="column is-6 is-offset-3">
                   <ul>

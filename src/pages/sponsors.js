@@ -24,7 +24,7 @@ const SponsorsPage = () => {
       <section className="section">
         <div className="container">
           <div className="box has-background-info-light">
-            <h2 className="title is-3 has-text-centered">{t("sponsors.becomeTitle")}</h2>
+            <h2 className="title is-3 has-text-centered has-text-dark">{t("sponsors.becomeTitle")}</h2>
             <div className="content">
               <p className="has-text-centered is-size-5">
                 {t("sponsors.becomeBody")}
@@ -186,12 +186,12 @@ const SponsorsPage = () => {
           </div>
 
           <div className="box has-background-light mt-6">
-            <h3 className="title is-4">{t("sponsors.interestedTitle")}</h3>
-            <p>
+            <h3 className="title is-4 has-text-dark">{t("sponsors.interestedTitle")}</h3>
+            <p className="has-text-dark">
               {t("sponsors.interestedBody")}
             </p>
             <p className="mt-3">
-              <strong>{t("sponsors.emailLabel")}</strong>{" "}
+              <strong className="has-text-dark">{t("sponsors.emailLabel")}</strong>{" "}
               <a href="mailto:Panama-org@kubernetescommunitydays.org">Panama-org@kubernetescommunitydays.org</a>
             </p>
           </div>

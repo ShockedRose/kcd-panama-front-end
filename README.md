@@ -1,6 +1,6 @@
 # KCD Panama 2026 Website
 
-Official website for Kubernetes Community Days Panama 2026 - May 13th, 2026 at The Quay.
+Official website for Kubernetes Community Days Panama 2026 - May 13th, 2026 at Panama.
 
 ## 🚀 Quick Start
 
@@ -71,7 +71,7 @@ Edit these files to update event information:
 **Homepage** (`src/pages/index.js`):
 ```javascript
 // Line ~22
-<strong>Date:</strong> May 13th, 2026 | <strong>Location:</strong> The Quay, Panama
+<strong>Date:</strong> May 13th, 2026 | <strong>Location:</strong> Panama, Panama
 ```
 
 **All Page Headers**: Update the hero sections in each page file.
@@ -115,7 +115,7 @@ Replace placeholder emails throughout the site:
 
 **File:** `src/pages/venue.js`
 
-Current venue: **The Quay: Panama Region Board of Trade**
+Current venue: **Panama: Panama Region Board of Trade**
 
 Update with:
 - Full address

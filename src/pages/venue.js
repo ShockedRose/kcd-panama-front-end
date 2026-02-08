@@ -23,9 +23,9 @@ const VenuePage = () => {
       <section className="section">
         <div className="container">
           <div className="box has-background-primary-light">
-            <h2 className="title is-3 has-text-centered">{t("venue.venueTitle")}</h2>
-            <p className="has-text-centered is-size-5 mb-4">
-              <strong>{t("venue.venueAddress")}</strong>
+            <h2 className="title is-3 has-text-centered has-text-dark">{t("venue.venueTitle")}</h2>
+            <p className="has-text-centered is-size-5 mb-4 has-text-dark">
+              <strong className="has-text-dark">{t("venue.venueAddress")}</strong>
             </p>
             <p className="has-text-centered mb-5">
               {t("venue.venueBody")}
@@ -40,7 +40,7 @@ const VenuePage = () => {
               />
             </div>
 
-            {/* Quay Venue Photos Gallery */}
+            {/* Panama Venue Photos Gallery */}
             <h3 className="title is-4 has-text-centered mb-4 mt-5">{t("venue.spacesTitle")}</h3>
             <div className="columns is-multiline">
               <div className="column is-6">
@@ -119,9 +119,9 @@ const VenuePage = () => {
             </ul>
           </div>
 
-          <div className="box has-background-light mt-6">
+          <div className="box has-background-light mt-6 has-text-dark">
             <p>
-              <strong>{t("venue.questionsTitle")}</strong>{" "}
+              <strong className="has-text-dark">{t("venue.questionsTitle")}</strong>{" "}
               {t("venue.questionsBody")}{" "}
               <a href="mailto:Panama-org@kubernetescommunitydays.org">Panama-org@kubernetescommunitydays.org</a>
             </p>
