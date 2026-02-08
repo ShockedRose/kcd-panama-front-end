@@ -214,9 +214,9 @@ const IndexPage = () => {
             <h3 className="title is-4 has-text-centered mb-4 has-text-dark">{t("home.sponsors.diamondTitle")}</h3>
             <div className="columns is-centered">
               <div className="column is-3 has-text-centered has-text-dark">
-                <a href="#sponsors" target="_blank" rel="noopener noreferrer" className="sponsor-logo-link">
+                <a href="https://example.com/diamond-sponsor" target="_blank" rel="noopener noreferrer" className="sponsor-logo-link">
                   <div className="box" style={{ padding: '2rem', backgroundColor: 'white', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <img src="" alt="sponsor diamond placeholder" style={{ maxWidth: '200px', width: '100%', height: 'auto' }} />
+                    <img src="/sponsors/mock-diamond.svg" alt="Mock Diamond Sponsor - Northwind Systems" style={{ maxWidth: '200px', width: '100%', height: 'auto' }} />
                   </div>
                 </a>
               </div>
@@ -228,9 +228,9 @@ const IndexPage = () => {
             <h3 className="title is-4 has-text-centered mb-4 has-text-dark">{t("home.sponsors.silverTitle")}</h3>
             <div className="columns is-centered">
               <div className="column is-3 has-text-centered has-text-dark">
-                <a href="#sponsors" target="_blank" rel="noopener noreferrer" className="sponsor-logo-link">
+                <a href="https://example.com/silver-sponsor" target="_blank" rel="noopener noreferrer" className="sponsor-logo-link">
                   <div className="box" style={{ padding: '2rem', backgroundColor: 'white', minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <img src="" alt="sponsor silver placeholder" style={{ maxWidth: '200px', width: '100%', height: 'auto' }} />
+                    <img src="/sponsors/mock-silver.svg" alt="Mock Silver Sponsor - Pinecone Ops" style={{ maxWidth: '200px', width: '100%', height: 'auto' }} />
                   </div>
                 </a>
               </div>

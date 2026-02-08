@@ -71,9 +71,9 @@ const SponsorsPage = () => {
                 <p className="mb-3"><strong>{t("sponsors.diamondSpots")}</strong></p>
               </div>
               <div className="column is-4">
-                <a href="https://www.rbc.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://example.com/diamond-sponsor" target="_blank" rel="noopener noreferrer">
                   <div className="box has-text-centered has-background-white" style={{ border: "3px solid #B9F2FF", padding: "2rem" }}>
-                    <img src="/sponsors/RBC-logo.png" alt="RBC - Diamond/Committee Partner Sponsor" style={{ maxWidth: '100%', height: 'auto' }} />
+                    <img src="/sponsors/mock-diamond.svg" alt="Mock Diamond Sponsor - Northwind Systems" style={{ maxWidth: '100%', height: 'auto' }} />
                   </div>
                 </a>
               </div>
@@ -98,10 +98,11 @@ const SponsorsPage = () => {
                 </div>
               </div>
               <div className="column is-4">
-                <div className="box has-text-centered has-background-light" style={{ border: "2px dashed #ccc", padding: "3rem" }}>
-                  <p className="has-text-grey is-size-5">{t("sponsors.platinumPlaceholder")}</p>
-                  <p className="has-text-grey is-size-7 mt-2">{t("sponsors.platinumPlaceholderNote")}</p>
-                </div>
+                <a href="https://example.com/platinum-sponsor" target="_blank" rel="noopener noreferrer">
+                  <div className="box has-text-centered has-background-white" style={{ border: "3px solid #E5E4E2", padding: "2rem" }}>
+                    <img src="/sponsors/mock-platinum.svg" alt="Mock Platinum Sponsor - Riverstone Cloud" style={{ maxWidth: "100%", height: "auto" }} />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -124,10 +125,11 @@ const SponsorsPage = () => {
                 </div>
               </div>
               <div className="column is-4">
-                <div className="box has-text-centered has-background-light" style={{ border: "2px dashed #ccc", padding: "3rem" }}>
-                  <p className="has-text-grey is-size-5">{t("sponsors.goldPlaceholder")}</p>
-                  <p className="has-text-grey is-size-7 mt-2">{t("sponsors.goldPlaceholderNote")}</p>
-                </div>
+                <a href="https://example.com/gold-sponsor" target="_blank" rel="noopener noreferrer">
+                  <div className="box has-text-centered has-background-white" style={{ border: "3px solid #FFD700", padding: "2rem" }}>
+                    <img src="/sponsors/mock-gold.svg" alt="Mock Gold Sponsor - Summit Stack" style={{ maxWidth: "100%", height: "auto" }} />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -150,9 +152,9 @@ const SponsorsPage = () => {
                 </div>
               </div>
               <div className="column is-4">
-                <a href="https://tremolo.io" target="_blank" rel="noopener noreferrer">
+                <a href="https://example.com/silver-sponsor" target="_blank" rel="noopener noreferrer">
                   <div className="box has-text-centered has-background-white" style={{ border: "3px solid #C0C0C0", padding: "2rem" }}>
-                    <img src="/sponsors/ts-logo-300w.png" alt="Tremolo Security - Silver Sponsor" style={{ maxWidth: '100%', height: 'auto' }} />
+                    <img src="/sponsors/mock-silver.svg" alt="Mock Silver Sponsor - Pinecone Ops" style={{ maxWidth: "100%", height: "auto" }} />
                   </div>
                 </a>
               </div>
